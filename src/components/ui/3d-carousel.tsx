@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion, useAnimation, useMotionValue, useTransform } from 'framer-motion'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export interface CarouselItem {
   image: string
@@ -28,9 +29,20 @@ function useFaceWidth() {
   return faceWidth
 }
 
-export function ThreeDPhotoCarousel({ items }: { items: CarouselItem[] }) {
+interface ThreeDPhotoCarouselProps {
+  items: CarouselItem[]
+  prevLabel?: string
+  nextLabel?: string
+}
+
+export function ThreeDPhotoCarousel({
+  items,
+  prevLabel = 'Previous',
+  nextLabel = 'Next',
+}: ThreeDPhotoCarouselProps) {
   const faceWidth = useFaceWidth()
   const faceCount = items.length
+  const anglePerItem = 360 / faceCount
   const cylinderWidth = faceWidth * faceCount
   const radius = cylinderWidth / (2 * Math.PI)
   const perspective = radius * 3.4
@@ -44,6 +56,13 @@ export function ThreeDPhotoCarousel({ items }: { items: CarouselItem[] }) {
   const rotation = useMotionValue(0)
   const transform = useTransform(rotation, (v) => `rotate3d(0, 1, 0, ${v}deg)`)
   const controls = useAnimation()
+
+  const goTo = (direction: 1 | -1) => {
+    controls.start({
+      rotateY: rotation.get() + direction * anglePerItem,
+      transition: { type: 'spring', stiffness: 100, damping: 30, mass: 0.4 },
+    })
+  }
 
   return (
     <div
@@ -74,7 +93,7 @@ export function ThreeDPhotoCarousel({ items }: { items: CarouselItem[] }) {
             className="absolute flex h-full origin-center items-center justify-center p-1.5 sm:p-2"
             style={{
               width: `${faceWidth}px`,
-              transform: `rotateY(${i * (360 / faceCount)}deg) translateZ(${radius}px)`,
+              transform: `rotateY(${i * anglePerItem}deg) translateZ(${radius}px)`,
               backfaceVisibility: 'hidden',
               WebkitBackfaceVisibility: 'hidden',
             }}
@@ -106,6 +125,25 @@ export function ThreeDPhotoCarousel({ items }: { items: CarouselItem[] }) {
           </div>
         ))}
       </motion.div>
+
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-between px-1 sm:px-3">
+        <button
+          type="button"
+          onClick={() => goTo(-1)}
+          aria-label={prevLabel}
+          className="pointer-events-auto flex h-10 w-10 animate-nudge-left items-center justify-center rounded-full border border-ink-950/10 bg-white/85 text-ink-800 shadow-lg backdrop-blur-md transition-colors hover:text-gold-600 sm:h-12 sm:w-12"
+        >
+          <ChevronLeft size={20} />
+        </button>
+        <button
+          type="button"
+          onClick={() => goTo(1)}
+          aria-label={nextLabel}
+          className="pointer-events-auto flex h-10 w-10 animate-nudge-right items-center justify-center rounded-full border border-ink-950/10 bg-white/85 text-ink-800 shadow-lg backdrop-blur-md transition-colors hover:text-gold-600 sm:h-12 sm:w-12"
+        >
+          <ChevronRight size={20} />
+        </button>
+      </div>
     </div>
   )
 }

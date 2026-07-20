@@ -57,6 +57,8 @@ export default {
         'float-late': 'float 7s 1.2s ease-in-out infinite alternate-reverse',
         'pulse-branch': 'pulseBranch 3.2s ease-in-out infinite',
         'dash-flow': 'dashFlow 7s linear infinite',
+        'nudge-left': 'nudgeLeft 1.6s ease-in-out infinite',
+        'nudge-right': 'nudgeRight 1.6s ease-in-out infinite',
       },
       keyframes: {
         marquee: {
@@ -82,6 +84,14 @@ export default {
         dashFlow: {
           '0%': { strokeDashoffset: '0' },
           '100%': { strokeDashoffset: '-220' },
+        },
+        nudgeLeft: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(-5px)' },
+        },
+        nudgeRight: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(5px)' },
         },
       },
     },

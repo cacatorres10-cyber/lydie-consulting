@@ -24,7 +24,11 @@ export function ServicesGallery() {
         </p>
       </div>
       <div className="mt-10 md:mt-14">
-        <ThreeDPhotoCarousel items={items} />
+        <ThreeDPhotoCarousel
+          items={items}
+          prevLabel={t.services.prevLabel}
+          nextLabel={t.services.nextLabel}
+        />
       </div>
     </section>
   )

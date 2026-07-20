@@ -54,6 +54,8 @@ export interface Copy {
     eyebrow: string
     title: string
     sub: string
+    prevLabel: string
+    nextLabel: string
     items: ServiceItem[]
   }
   career: {
@@ -166,6 +168,8 @@ const fr: Copy = {
     eyebrow: 'Services',
     title: 'Ce que je peux faire pour vous',
     sub: 'Faites glisser pour faire tourner la galerie.',
+    prevLabel: 'Service précédent',
+    nextLabel: 'Service suivant',
     items: [
       { name: 'Diplomatie & coopération', category: 'Conseil stratégique', tagline: 'Représentation, médiation et relations institutionnelles.' },
       { name: 'Services migratoires & consulaires', category: 'Mobilité internationale', tagline: 'Visas, démarches administratives et accompagnement consulaire.' },
@@ -332,6 +336,8 @@ const es: Copy = {
     eyebrow: 'Servicios',
     title: 'Lo que puedo hacer por usted',
     sub: 'Arrastre para girar la galería.',
+    prevLabel: 'Servicio anterior',
+    nextLabel: 'Servicio siguiente',
     items: [
       { name: 'Diplomacia y cooperación', category: 'Consultoría estratégica', tagline: 'Representación, mediación y relaciones institucionales.' },
       { name: 'Servicios migratorios y consulares', category: 'Movilidad internacional', tagline: 'Visados, trámites administrativos y acompañamiento consular.' },
@@ -498,6 +504,8 @@ const en: Copy = {
     eyebrow: 'Services',
     title: 'What I can do for you',
     sub: 'Drag to rotate the gallery.',
+    prevLabel: 'Previous service',
+    nextLabel: 'Next service',
     items: [
       { name: 'Diplomacy & cooperation', category: 'Strategic consulting', tagline: 'Representation, mediation and institutional relations.' },
       { name: 'Migration & consular services', category: 'International mobility', tagline: 'Visas, administrative procedures and consular support.' },
