@@ -167,7 +167,7 @@ export function Hero() {
                     src={s.img}
                     alt={s.label}
                     loading="lazy"
-                    className="aspect-[4/3] w-full object-cover grayscale transition-all duration-700 ease-smooth group-hover:grayscale-0"
+                    className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-smooth group-hover:scale-105"
                   />
                 </div>
                 <p className="truncate px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-[0.18em] text-ink-600">

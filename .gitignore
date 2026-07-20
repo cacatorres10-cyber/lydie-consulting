@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Dossier de reception des photos client (non versionne)
+/foto-lydie/

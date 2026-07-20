@@ -54,7 +54,7 @@ export function ServicesGrid() {
                       src={GALLERY_IMAGES[i]}
                       alt={item.name}
                       loading="lazy"
-                      className="aspect-[4/3] w-full object-cover grayscale transition-all duration-700 ease-smooth group-hover:scale-105 group-hover:grayscale-0"
+                      className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-smooth group-hover:scale-105"
                     />
                   </div>
                   <div className="p-6">
