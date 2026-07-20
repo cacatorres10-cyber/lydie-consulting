@@ -140,7 +140,12 @@ export function Hero() {
             {/* Noeud central */}
             <div className="glow-center absolute left-1/2 top-1/2 z-10 w-[400px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-3xl border border-ink-950/10 xl:w-[460px]">
               <div className="relative aspect-video">
-                <img src={IMG.paris} alt={t.hero.imageCaption} className="absolute inset-0 h-full w-full object-cover" />
+                <img
+                  src={IMG.lydie}
+                  alt={t.hero.name}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  style={{ objectPosition: 'center 25%' }}
+                />
                 <div
                   aria-hidden="true"
                   className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/15 to-transparent"
@@ -183,7 +188,12 @@ export function Hero() {
           <div className="mt-12 lg:hidden">
             <div className="glow-center relative overflow-hidden rounded-3xl border border-ink-950/10">
               <div className="relative aspect-video">
-                <img src={IMG.paris} alt={t.hero.imageCaption} className="absolute inset-0 h-full w-full object-cover" />
+                <img
+                  src={IMG.lydie}
+                  alt={t.hero.name}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  style={{ objectPosition: 'center 25%' }}
+                />
                 <div
                   aria-hidden="true"
                   className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/15 to-transparent"

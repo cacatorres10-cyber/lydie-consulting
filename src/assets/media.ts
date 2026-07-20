@@ -1,10 +1,12 @@
+import lydiePortrait from './lydie.jpg'
+
 // Toutes les images du site (Unsplash, URLs verifiees visuellement)
 const u = (id: string, w = 900) =>
   `https://images.unsplash.com/${id}?w=${w}&auto=format&fit=crop&q=80`
 
 export const IMG = {
-  // Hero
-  paris: u('photo-1502602898657-3e91760cbb34', 1200),
+  // Hero: portrait reel de Lydie
+  lydie: lydiePortrait,
 
   // Galerie circulaire des services (ordre = ordre des items i18n)
   diplomacy: u('photo-1451187580459-43490279c0fa'),

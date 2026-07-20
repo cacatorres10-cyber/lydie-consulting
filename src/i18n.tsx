@@ -29,7 +29,6 @@ export interface Copy {
     sub: string
     ctaPrimary: string
     ctaSecondary: string
-    imageCaption: string
     stats: { value: string; label: string }[]
   }
   marquee: string[]
@@ -106,7 +105,6 @@ const fr: Copy = {
     sub: "J'accompagne les institutions, les entreprises et les particuliers en diplomatie, coopération, communication politique, tourisme, immigration, affaires consulaires, microfinance, levée de fonds et gestion de crise.",
     ctaPrimary: 'Discutons de votre projet',
     ctaSecondary: 'LinkedIn',
-    imageCaption: "Basée en France · Missions à l'international",
     stats: [
       { value: '15+', label: "années d'expérience" },
       { value: '12', label: "domaines d'expertise" },
@@ -274,7 +272,6 @@ const es: Copy = {
     sub: 'Acompaño a instituciones, empresas y particulares en diplomacia, cooperación, comunicación política, turismo, inmigración, asuntos consulares, microfinanzas, captación de fondos y gestión de crisis.',
     ctaPrimary: 'Hablemos de su proyecto',
     ctaSecondary: 'LinkedIn',
-    imageCaption: 'Con base en Francia · Misiones internacionales',
     stats: [
       { value: '15+', label: 'años de experiencia' },
       { value: '12', label: 'áreas de especialización' },
@@ -442,7 +439,6 @@ const en: Copy = {
     sub: 'I support institutions, businesses and individuals in diplomacy, cooperation, political communication, tourism, immigration, consular affairs, microfinance, fundraising and crisis management.',
     ctaPrimary: 'Let us talk about your project',
     ctaSecondary: 'LinkedIn',
-    imageCaption: 'Based in France · Missions worldwide',
     stats: [
       { value: '15+', label: 'years of experience' },
       { value: '12', label: 'areas of expertise' },
