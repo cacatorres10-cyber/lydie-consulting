@@ -129,6 +129,36 @@ function GrandeCaraibePanel() {
   )
 }
 
+function AcademyPanel() {
+  const { t } = useLang()
+  const a = t.forum.academy
+
+  return (
+    <div>
+      <div className="text-center">
+        <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-ink-950 text-gold-300">
+          <GraduationCap size={22} strokeWidth={1.8} />
+        </span>
+        <h3 className="mt-4 font-display text-2xl font-medium italic text-ink-950 md:text-3xl">{a.title}</h3>
+        <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">{a.subtitle}</p>
+        <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-ink-600">{a.intro}</p>
+      </div>
+
+      <p className="eyebrow mt-10 text-center text-ink-950/45">{a.topicsTitle}</p>
+      <ol className="mx-auto mt-5 grid max-w-4xl gap-x-8 gap-y-3 sm:grid-cols-2">
+        {a.topics.map((topic, i) => (
+          <li key={topic} className="flex items-start gap-3">
+            <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-[11px] font-semibold text-gold-700">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <span className="text-sm leading-snug text-ink-950/75">{topic}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  )
+}
+
 function GuadeloupePanel() {
   const { t } = useLang()
   const gp = t.forum.guadeloupe
@@ -203,7 +233,12 @@ export function Forum() {
   const { t } = useLang()
   const [activeTab, setActiveTab] = useState(0)
 
-  const panels = [<VisionPanel key="vision" />, <GrandeCaraibePanel key="grande" />, <GuadeloupePanel key="guad" />]
+  const panels = [
+    <VisionPanel key="vision" />,
+    <GrandeCaraibePanel key="grande" />,
+    <GuadeloupePanel key="guad" />,
+    <AcademyPanel key="academy" />,
+  ]
 
   return (
     <section id="forum" className="bg-dots scroll-mt-24 border-y border-ink-950/10 bg-paper py-24 md:py-32">

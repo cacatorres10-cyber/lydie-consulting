@@ -126,6 +126,13 @@ export interface Copy {
       partnersTitle: string
       partners: string[]
     }
+    academy: {
+      title: string
+      subtitle: string
+      intro: string
+      topicsTitle: string
+      topics: string[]
+    }
   }
   contact: {
     eyebrow: string
@@ -229,7 +236,7 @@ const fr: Copy = {
     nextLabel: 'Service suivant',
     items: [
       { name: 'Diplomatie & coopération', category: 'Conseil stratégique', tagline: 'Représentation, médiation et relations institutionnelles.' },
-      { name: 'Services migratoires & consulaires', category: 'Mobilité internationale', tagline: 'Visas, démarches administratives et accompagnement consulaire.' },
+      { name: 'Services migratoires & consulaires', category: 'Mobilité internationale', tagline: 'Changement de pays, résidence, naturalisation, visas et accompagnement consulaire.' },
       { name: 'Organisation de voyages', category: 'Mobilité internationale', tagline: 'Voyages sur mesure pour particuliers et professionnels.' },
       { name: 'Immobilier', category: 'Patrimoine', tagline: 'Location, vente, achat et estimation immobilière.' },
       { name: "Formation d'élues", category: 'Formation', tagline: 'Accompagnement des élues locales depuis 2017.' },
@@ -300,7 +307,7 @@ const fr: Copy = {
     title: 'Forum Caraïbe, Coopération & Développement',
     intro:
       "Un rendez-vous annuel imaginé pour réunir institutions, entreprises, femmes, jeunesse et cultures de la Grande Caraïbe autour d'une ambition commune: construire ensemble la Caraïbe de demain.",
-    tabs: ['Vision', 'Le Forum Grande Caraïbe', 'Édition pilote : Guadeloupe'],
+    tabs: ['Vision', 'Le Forum Grande Caraïbe', 'Édition pilote : Guadeloupe', 'Académie Leadership'],
     vision: {
       theme: 'Construire ensemble la Caraïbe de demain',
       durationLocation:
@@ -405,6 +412,35 @@ const fr: Copy = {
         'Universités',
         'Acteurs du tourisme',
         'Entreprises locales',
+      ],
+    },
+    academy: {
+      title: 'Académie Caribéenne de Leadership pour Femmes Élues',
+      subtitle: 'Un programme de formation continue',
+      intro:
+        "Pensée pour les conseillères, maires, députées et sénatrices de la Caraïbe, cette académie structure vingt thématiques clés de la gouvernance et du leadership politique, dans la continuité des formations d'élues menées depuis 2017.",
+      topicsTitle: 'Les vingt thématiques',
+      topics: [
+        'Leadership politique et éthique',
+        'Gouvernance et administration publique',
+        'Communication politique et gestion des médias',
+        'Art oratoire et débat public',
+        'Élaboration et évaluation des politiques publiques',
+        'Gestion de projets et développement territorial',
+        'Budget public et finances locales',
+        'Transparence, redevabilité et lutte contre la corruption',
+        'Diplomatie territoriale et coopération internationale',
+        'Négociation, médiation et résolution de conflits',
+        'Égalité des genres et leadership inclusif',
+        'Participation citoyenne et renforcement démocratique',
+        "Gestion de crise et communication d'urgence",
+        'Transformation numérique et gouvernement électronique',
+        'Relations institutionnelles et protocole',
+        'Développement durable et Agenda 2030 (ODD)',
+        'Gestion de campagnes et stratégie électorale',
+        "Plaidoyer politique et construction d'alliances",
+        'Droits humains et cadre juridique de la fonction publique',
+        'Développement économique local et entrepreneuriat',
       ],
     },
   },
@@ -513,7 +549,7 @@ const es: Copy = {
     nextLabel: 'Servicio siguiente',
     items: [
       { name: 'Diplomacia y cooperación', category: 'Consultoría estratégica', tagline: 'Representación, mediación y relaciones institucionales.' },
-      { name: 'Servicios migratorios y consulares', category: 'Movilidad internacional', tagline: 'Visados, trámites administrativos y acompañamiento consular.' },
+      { name: 'Servicios migratorios y consulares', category: 'Movilidad internacional', tagline: 'Cambio de país, residencia, naturalización, visados y acompañamiento consular.' },
       { name: 'Organización de viajes', category: 'Movilidad internacional', tagline: 'Viajes a medida para particulares y profesionales.' },
       { name: 'Bienes raíces', category: 'Patrimonio', tagline: 'Alquiler, venta, compra y tasación inmobiliaria.' },
       { name: 'Formación de electas', category: 'Formación', tagline: 'Acompañamiento de electas locales desde 2017.' },
@@ -584,7 +620,7 @@ const es: Copy = {
     title: 'Foro Caribe, Cooperación y Desarrollo',
     intro:
       'Un encuentro anual pensado para reunir a instituciones, empresas, mujeres, juventud y culturas del Gran Caribe en torno a una ambición común: construir juntos el Caribe de mañana.',
-    tabs: ['Visión', 'El Foro Gran Caribe', 'Edición piloto: Guadalupe'],
+    tabs: ['Visión', 'El Foro Gran Caribe', 'Edición piloto: Guadalupe', 'Academia de Liderazgo'],
     vision: {
       theme: 'Construir juntos el Caribe de mañana',
       durationLocation:
@@ -689,6 +725,35 @@ const es: Copy = {
         'Universidades',
         'Actores del turismo',
         'Empresas locales',
+      ],
+    },
+    academy: {
+      title: 'Academia Caribeña de Liderazgo para Mujeres Electas',
+      subtitle: 'Un programa de formación continua',
+      intro:
+        'Pensada para concejalas, alcaldesas, diputadas y senadoras del Caribe, esta academia estructura veinte temas clave de gobernanza y liderazgo político, en la continuidad de la formación de electas que llevo a cabo desde 2017.',
+      topicsTitle: 'Los veinte temas',
+      topics: [
+        'Liderazgo político y ético',
+        'Gobernanza y administración pública',
+        'Comunicación política y manejo de medios',
+        'Oratoria y debate público',
+        'Elaboración y evaluación de políticas públicas',
+        'Gestión de proyectos y desarrollo territorial',
+        'Presupuesto público y finanzas locales',
+        'Transparencia, rendición de cuentas y lucha contra la corrupción',
+        'Diplomacia territorial y cooperación internacional',
+        'Negociación, mediación y resolución de conflictos',
+        'Igualdad de género y liderazgo inclusivo',
+        'Participación ciudadana y fortalecimiento democrático',
+        'Gestión de crisis y comunicación de emergencia',
+        'Transformación digital y gobierno electrónico',
+        'Relaciones institucionales y protocolo',
+        'Desarrollo sostenible y Agenda 2030 (ODS)',
+        'Gestión de campañas y estrategia electoral',
+        'Incidencia política y construcción de alianzas',
+        'Derechos humanos y marco jurídico de la función pública',
+        'Desarrollo económico local y emprendimiento',
       ],
     },
   },
@@ -797,7 +862,7 @@ const en: Copy = {
     nextLabel: 'Next service',
     items: [
       { name: 'Diplomacy & cooperation', category: 'Strategic consulting', tagline: 'Representation, mediation and institutional relations.' },
-      { name: 'Migration & consular services', category: 'International mobility', tagline: 'Visas, administrative procedures and consular support.' },
+      { name: 'Migration & consular services', category: 'International mobility', tagline: 'Changing country, residency, naturalisation, visas and consular support.' },
       { name: 'Travel planning', category: 'International mobility', tagline: 'Tailor-made trips for individuals and professionals.' },
       { name: 'Real estate', category: 'Property', tagline: 'Rental, sale, purchase and property appraisal.' },
       { name: 'Training for elected officials', category: 'Training', tagline: 'Supporting locally elected officials since 2017.' },
@@ -868,7 +933,7 @@ const en: Copy = {
     title: 'Caribbean Forum for Cooperation and Development',
     intro:
       "An annual gathering designed to bring together institutions, businesses, women, youth and cultures from the Greater Caribbean around one shared ambition: building tomorrow's Caribbean together.",
-    tabs: ['Vision', 'The Greater Caribbean Forum', 'Pilot edition: Guadeloupe'],
+    tabs: ['Vision', 'The Greater Caribbean Forum', 'Pilot edition: Guadeloupe', 'Leadership Academy'],
     vision: {
       theme: "Building tomorrow's Caribbean together",
       durationLocation:
@@ -973,6 +1038,35 @@ const en: Copy = {
         'Universities',
         'Tourism stakeholders',
         'Local businesses',
+      ],
+    },
+    academy: {
+      title: 'Caribbean Leadership Academy for Elected Women',
+      subtitle: 'A continuing-education programme',
+      intro:
+        'Designed for councilwomen, mayors, members of parliament and senators across the Caribbean, this academy structures twenty key themes in governance and political leadership, building on the training of elected officials I have led since 2017.',
+      topicsTitle: 'The twenty themes',
+      topics: [
+        'Political and ethical leadership',
+        'Governance and public administration',
+        'Political communication and media relations',
+        'Public speaking and debate',
+        'Public policy design and evaluation',
+        'Project management and territorial development',
+        'Public budgeting and local finance',
+        'Transparency, accountability and anti-corruption',
+        'Territorial diplomacy and international cooperation',
+        'Negotiation, mediation and conflict resolution',
+        'Gender equality and inclusive leadership',
+        'Citizen participation and democratic strengthening',
+        'Crisis management and emergency communication',
+        'Digital transformation and e-government',
+        'Institutional relations and protocol',
+        'Sustainable development and the 2030 Agenda (SDGs)',
+        'Campaign management and electoral strategy',
+        'Political advocacy and coalition building',
+        'Human rights and the legal framework of public office',
+        'Local economic development and entrepreneurship',
       ],
     },
   },
