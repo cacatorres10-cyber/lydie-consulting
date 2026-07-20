@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 40 33% 97%;
+  --foreground: 216 57% 9%;
+  --card: 215 47% 12%;
+  --card-foreground: 40 33% 97%;
+  --muted: 40 20% 92%;
+  --muted-foreground: 216 20% 38%;
+  --border: 216 25% 24%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper font-sans text-ink-950 antialiased;
+}
+
+::selection {
+  @apply bg-gold-300 text-ink-950;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a1424;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d4368;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cfa958;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.32em];
+}
+
+/* Soft radial glow used on dark sections (background-image only, so it
+   stacks on top of the section's background-color) */
+.glow-gold {
+  background-image:
+    radial-gradient(ellipse 60% 45% at 50% 0%, rgba(207, 169, 88, 0.14), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 85% 100%, rgba(74, 106, 155, 0.18), transparent 70%);
+}
+
+/* Subtle paper texture for light sections */
+.texture-paper {
+  background-image: radial-gradient(rgba(10, 20, 36, 0.045) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
