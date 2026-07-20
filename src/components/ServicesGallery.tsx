@@ -1,64 +1,30 @@
-import { useEffect, useState } from 'react'
-import { CircularGallery } from '@/components/ui/circular-gallery'
-import type { GalleryItem } from '@/components/ui/circular-gallery'
+import { ThreeDPhotoCarousel } from '@/components/ui/3d-carousel'
 import { useLang } from '@/i18n'
 import { GALLERY_IMAGES } from '@/assets/media'
 
-function useGalleryRadius() {
-  const [radius, setRadius] = useState(620)
-  useEffect(() => {
-    const compute = () => {
-      const w = window.innerWidth
-      setRadius(Math.max(240, Math.min(660, w * 0.56)))
-    }
-    compute()
-    window.addEventListener('resize', compute)
-    return () => window.removeEventListener('resize', compute)
-  }, [])
-  return radius
-}
-
 export function ServicesGallery() {
   const { t } = useLang()
-  const radius = useGalleryRadius()
 
-  const items: GalleryItem[] = t.services.items.map((s, i) => ({
-    common: s.name,
-    binomial: s.category,
-    photo: {
-      url: GALLERY_IMAGES[i],
-      text: s.name,
-      by: s.tagline,
-    },
+  const items = t.services.items.map((s, i) => ({
+    image: GALLERY_IMAGES[i],
+    category: s.category,
+    title: s.name,
+    tagline: s.tagline,
   }))
 
   return (
-    <section
-      id="showcase"
-      className="bg-dots relative border-y border-ink-950/10 bg-paper"
-      style={{ height: '320vh' }}
-    >
-      <div className="sticky top-0 flex h-screen w-full flex-col items-center justify-center overflow-hidden">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 z-10 h-56 bg-gradient-to-b from-paper via-paper/80 to-transparent"
-        />
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-20 px-5 pt-16 text-center md:pt-20">
-          <p className="eyebrow text-gold-600">{t.services.eyebrow}</p>
-          <h2 className="mt-3 font-display text-3xl font-medium italic text-ink-950 sm:text-4xl md:text-6xl">
-            {t.services.title}
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-xs text-ink-500 sm:text-sm md:text-base">
-            {t.services.sub}
-          </p>
-        </div>
-        <div className="h-full w-full translate-y-14 sm:translate-y-16 md:translate-y-20">
-          <CircularGallery items={items} radius={radius} autoRotateSpeed={0.05} />
-        </div>
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-paper to-transparent"
-        />
+    <section id="showcase" className="bg-dots relative border-y border-ink-950/10 bg-paper py-16 md:py-24">
+      <div className="mx-auto max-w-7xl px-5 text-center md:px-8">
+        <p className="eyebrow text-gold-600">{t.services.eyebrow}</p>
+        <h2 className="mt-3 font-display text-3xl font-medium italic text-ink-950 sm:text-4xl md:text-6xl">
+          {t.services.title}
+        </h2>
+        <p className="mx-auto mt-3 max-w-xl text-xs text-ink-500 sm:text-sm md:text-base">
+          {t.services.sub}
+        </p>
+      </div>
+      <div className="mt-10 md:mt-14">
+        <ThreeDPhotoCarousel items={items} />
       </div>
     </section>
   )
