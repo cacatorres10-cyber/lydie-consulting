@@ -1,5 +1,6 @@
 import {
   Landmark,
+  Globe,
   Stamp,
   Plane,
   Building2,
@@ -17,6 +18,7 @@ import { Reveal } from '@/components/Reveal'
 
 const ICONS = [
   Landmark,
+  Globe,
   Stamp,
   Plane,
   Building2,

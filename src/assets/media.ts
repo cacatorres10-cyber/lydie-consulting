@@ -10,7 +10,8 @@ export const IMG = {
 
   // Galerie circulaire des services (ordre = ordre des items i18n)
   diplomacy: u('photo-1451187580459-43490279c0fa'),
-  consular: u('photo-1521295121783-8a321d551ad2'),
+  migration: u('photo-1521295121783-8a321d551ad2'),
+  consular: u('photo-1654163600175-efc47ce20b29'),
   travel: u('photo-1436491865332-7a61a109cc05'),
   realestate: u('photo-1564013799919-ab600027ffc6'),
   elected: u('photo-1529107386315-e1a2ed48a620'),
@@ -24,6 +25,7 @@ export const IMG = {
 
 export const GALLERY_IMAGES = [
   IMG.diplomacy,
+  IMG.migration,
   IMG.consular,
   IMG.travel,
   IMG.realestate,

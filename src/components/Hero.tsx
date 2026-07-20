@@ -6,7 +6,7 @@ import { LinkedInIcon } from '@/components/icons'
 import { Reveal } from '@/components/Reveal'
 
 // Indices des services montres en cartes satellites (parlement, avion, villa, evenement)
-const SAT_IDX = [4, 2, 3, 6]
+const SAT_IDX = [5, 3, 4, 7]
 
 const SAT_POS = [
   'left-[1%] top-[4%] w-[200px] -rotate-3 animate-float',

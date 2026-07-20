@@ -236,7 +236,8 @@ const fr: Copy = {
     nextLabel: 'Service suivant',
     items: [
       { name: 'Diplomatie & coopération', category: 'Conseil stratégique', tagline: 'Représentation, médiation et relations institutionnelles.' },
-      { name: 'Services migratoires & consulaires', category: 'Mobilité internationale', tagline: 'Changement de pays, résidence, naturalisation, visas et accompagnement consulaire.' },
+      { name: 'Services migratoires', category: 'Mobilité internationale', tagline: 'Changement de pays, résidence et naturalisation.' },
+      { name: 'Services consulaires', category: 'Mobilité internationale', tagline: 'Visas, démarches administratives et accompagnement consulaire.' },
       { name: 'Organisation de voyages', category: 'Mobilité internationale', tagline: 'Voyages sur mesure pour particuliers et professionnels.' },
       { name: 'Immobilier', category: 'Patrimoine', tagline: 'Location, vente, achat et estimation immobilière.' },
       { name: "Formation d'élues", category: 'Formation', tagline: 'Accompagnement des élues locales depuis 2017.' },
@@ -549,7 +550,8 @@ const es: Copy = {
     nextLabel: 'Servicio siguiente',
     items: [
       { name: 'Diplomacia y cooperación', category: 'Consultoría estratégica', tagline: 'Representación, mediación y relaciones institucionales.' },
-      { name: 'Servicios migratorios y consulares', category: 'Movilidad internacional', tagline: 'Cambio de país, residencia, naturalización, visados y acompañamiento consular.' },
+      { name: 'Servicios migratorios', category: 'Movilidad internacional', tagline: 'Cambio de país, residencia y naturalización.' },
+      { name: 'Servicios consulares', category: 'Movilidad internacional', tagline: 'Visados, trámites administrativos y acompañamiento consular.' },
       { name: 'Organización de viajes', category: 'Movilidad internacional', tagline: 'Viajes a medida para particulares y profesionales.' },
       { name: 'Bienes raíces', category: 'Patrimonio', tagline: 'Alquiler, venta, compra y tasación inmobiliaria.' },
       { name: 'Formación de electas', category: 'Formación', tagline: 'Acompañamiento de electas locales desde 2017.' },
@@ -862,7 +864,8 @@ const en: Copy = {
     nextLabel: 'Next service',
     items: [
       { name: 'Diplomacy & cooperation', category: 'Strategic consulting', tagline: 'Representation, mediation and institutional relations.' },
-      { name: 'Migration & consular services', category: 'International mobility', tagline: 'Changing country, residency, naturalisation, visas and consular support.' },
+      { name: 'Migration services', category: 'International mobility', tagline: 'Changing country, residency and naturalisation.' },
+      { name: 'Consular services', category: 'International mobility', tagline: 'Visas, administrative procedures and consular support.' },
       { name: 'Travel planning', category: 'International mobility', tagline: 'Tailor-made trips for individuals and professionals.' },
       { name: 'Real estate', category: 'Property', tagline: 'Rental, sale, purchase and property appraisal.' },
       { name: 'Training for elected officials', category: 'Training', tagline: 'Supporting locally elected officials since 2017.' },
