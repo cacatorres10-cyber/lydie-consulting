@@ -17,9 +17,27 @@ export interface CareerItem {
   desc: string
 }
 
+export interface ForumPole {
+  title: string
+  items: string[]
+}
+
+export interface ForumDay {
+  label: string
+  title: string
+  items: string[]
+}
+
 export interface Copy {
   meta: { title: string; description: string }
-  nav: { about: string; expertise: string; services: string; career: string; contact: string }
+  nav: {
+    about: string
+    expertise: string
+    services: string
+    career: string
+    forum: string
+    contact: string
+  }
   hero: {
     eyebrow: string
     name: string
@@ -73,10 +91,48 @@ export interface Copy {
     langsNote: string
     langs: string[]
   }
+  forum: {
+    eyebrow: string
+    title: string
+    intro: string
+    tabs: string[]
+    vision: {
+      theme: string
+      durationLocation: string
+      objectivesTitle: string
+      objectives: string[]
+      impactTitle: string
+      impact: { label: string; items: string[] }[]
+    }
+    grandeCaraibe: {
+      title: string
+      sub: string
+      poles: ForumPole[]
+      missTitle: string
+      missDesc: string
+      prizesTitle: string
+      prizes: string[]
+    }
+    guadeloupe: {
+      title: string
+      sub: string
+      duration: string
+      days: ForumDay[]
+      missNote: string
+      prizesTitle: string
+      prizes: string[]
+      budgetLabel: string
+      budgetValue: string
+      partnersTitle: string
+      partners: string[]
+    }
+  }
   contact: {
     eyebrow: string
     title: string
     sub: string
+    whatsappLabel: string
+    whatsappMessage: string
     emailLabel: string
     linkedinLabel: string
     location: string
@@ -95,6 +151,7 @@ const fr: Copy = {
     expertise: 'Expertise',
     services: 'Services',
     career: 'Parcours',
+    forum: 'Forum Caraïbe',
     contact: 'Contact',
   },
   hero: {
@@ -238,10 +295,125 @@ const fr: Copy = {
     langsNote: 'Un accompagnement possible en quatre langues.',
     langs: ['Français', 'Espagnol', 'Anglais', 'Portugais'],
   },
+  forum: {
+    eyebrow: 'Projet phare',
+    title: 'Forum Caraïbe, Coopération & Développement',
+    intro:
+      "Un rendez-vous annuel imaginé pour réunir institutions, entreprises, femmes, jeunesse et cultures de la Grande Caraïbe autour d'une ambition commune: construire ensemble la Caraïbe de demain.",
+    tabs: ['Vision', 'Le Forum Grande Caraïbe', 'Édition pilote : Guadeloupe'],
+    vision: {
+      theme: 'Construire ensemble la Caraïbe de demain',
+      durationLocation:
+        '5 jours, en alternance chaque année (République dominicaine, Guadeloupe, Martinique, Sainte-Lucie, Barbade, Jamaïque...).',
+      objectivesTitle: 'Les objectifs',
+      objectives: [
+        'Renforcer les échanges entre les territoires de la Caraïbe',
+        'Favoriser les investissements et les partenariats',
+        'Valoriser les cultures caribéennes',
+        'Promouvoir le tourisme régional',
+        "Soutenir l'entrepreneuriat féminin et des jeunes",
+        'Donner une visibilité internationale aux initiatives de coopération',
+      ],
+      impactTitle: 'Retombées attendues',
+      impact: [
+        { label: 'Économiques', items: ['Fréquentation hôtelière', 'Restauration', 'Transport', 'Commerce', 'Artisanat'] },
+        { label: 'Culturelles', items: ['Promotion des artistes', 'Valorisation du patrimoine'] },
+        { label: 'Diplomatiques', items: ['Nouveaux partenariats', 'Coopération universitaire', 'Échanges institutionnels'] },
+      ],
+    },
+    grandeCaraibe: {
+      title: 'Cinq grands pôles',
+      sub: "Du sommet institutionnel au festival des cultures, un forum pensé comme une vitrine complète de la coopération caribéenne.",
+      poles: [
+        {
+          title: 'Sommet institutionnel',
+          items: ['Ministres, maires, parlementaires', 'Organisations régionales, chambres de commerce', 'Coopération économique, mobilité, transition énergétique'],
+        },
+        {
+          title: 'Forum économique',
+          items: ['Entreprises, investisseurs, banques, start-up', 'Rencontres B2B et rendez-vous investisseurs', "Salon de l'innovation"],
+        },
+        {
+          title: 'Forum des femmes',
+          items: ['Leadership et politique', 'Entrepreneuriat et microfinance', 'Santé et numérique'],
+        },
+        {
+          title: 'Forum de la jeunesse',
+          items: ['Universités, écoles, associations', "Concours d'éloquence, hackathon", 'Simulations diplomatiques'],
+        },
+        {
+          title: 'Festival des cultures caribéennes',
+          items: ['Un pavillon par territoire', 'Gastronomie, artisanat, musique, danse', 'Tourisme et traditions'],
+        },
+      ],
+      missTitle: 'Miss Caraïbes Internationale',
+      missDesc:
+        'Le concours est intégré au forum: les candidates deviennent des ambassadrices de leur territoire, évaluées sur leur présentation, leur discours, un projet de coopération et un entretien avec le jury.',
+      prizesTitle: 'Les prix',
+      prizes: [
+        'Miss Caraïbes Internationale',
+        'Prix Leadership',
+        'Prix Innovation',
+        'Prix Culture',
+        'Prix Environnement',
+        'Prix Solidarité',
+        'Prix Entrepreneuriat',
+        'Prix Diplomatie',
+      ],
+    },
+    guadeloupe: {
+      title: 'La Guadeloupe, carrefour de la Grande Caraïbe',
+      sub: 'Une première édition pilote pour ancrer le forum avant de l’étendre progressivement aux autres territoires.',
+      duration: 'Durée : 3 jours',
+      days: [
+        {
+          label: 'Jour 1',
+          title: 'Coopération économique',
+          items: ['Ouverture officielle (Région, Préfet, consuls)', 'Conférences: commerce, export, économie bleue', 'Rencontres B2B'],
+        },
+        {
+          label: 'Jour 2',
+          title: 'Jeunesse et femmes',
+          items: ['Leadership féminin', 'Entrepreneuriat', 'Remise des Prix de la Coopération'],
+        },
+        {
+          label: 'Jour 3',
+          title: 'Culture et tourisme',
+          items: ['Village caribéen, un stand par territoire', 'Gastronomie, artisanat, musique', 'Élection de Miss Guadeloupe Coopération'],
+        },
+      ],
+      missNote:
+        'Une ambassadrice de la coopération régionale, et non un concours concurrent de Miss Guadeloupe: les candidates sont évaluées sur leur projet, leur connaissance de la Caraïbe et leur capacité à représenter le territoire.',
+      prizesTitle: 'Les prix',
+      prizes: [
+        'Ambassadrice de la Coopération',
+        'Prix du Leadership',
+        "Prix de l'Innovation",
+        'Prix Culture',
+        'Prix Tourisme',
+        'Prix Jeunesse',
+      ],
+      budgetLabel: 'Budget estimatif',
+      budgetValue: '80 000 € – 150 000 €',
+      partnersTitle: 'Partenaires envisagés',
+      partners: [
+        'Région Guadeloupe',
+        'Département',
+        "Communautés d'agglomération",
+        'Communes',
+        'Chambres consulaires',
+        'Universités',
+        'Acteurs du tourisme',
+        'Entreprises locales',
+      ],
+    },
+  },
   contact: {
     eyebrow: 'Contact',
     title: 'Travaillons ensemble',
     sub: "Basée en France, disponible pour des missions en Europe, dans la Caraïbe et à l'international. Parlons de votre projet.",
+    whatsappLabel: 'Écrire sur WhatsApp',
+    whatsappMessage: 'Bonjour Lydie, je souhaite échanger sur un projet.',
     emailLabel: 'Envoyer un email',
     linkedinLabel: 'Me suivre sur LinkedIn',
     location: 'France',
@@ -263,6 +435,7 @@ const es: Copy = {
     expertise: 'Especialidades',
     services: 'Servicios',
     career: 'Trayectoria',
+    forum: 'Foro Caribe',
     contact: 'Contacto',
   },
   hero: {
@@ -406,10 +579,125 @@ const es: Copy = {
     langsNote: 'Acompañamiento posible en cuatro idiomas.',
     langs: ['Francés', 'Español', 'Inglés', 'Portugués'],
   },
+  forum: {
+    eyebrow: 'Proyecto insignia',
+    title: 'Foro Caribe, Cooperación y Desarrollo',
+    intro:
+      'Un encuentro anual pensado para reunir a instituciones, empresas, mujeres, juventud y culturas del Gran Caribe en torno a una ambición común: construir juntos el Caribe de mañana.',
+    tabs: ['Visión', 'El Foro Gran Caribe', 'Edición piloto: Guadalupe'],
+    vision: {
+      theme: 'Construir juntos el Caribe de mañana',
+      durationLocation:
+        '5 días, en sedes rotativas cada año (República Dominicana, Guadalupe, Martinica, Santa Lucía, Barbados, Jamaica...).',
+      objectivesTitle: 'Los objetivos',
+      objectives: [
+        'Fortalecer los intercambios entre los territorios del Caribe',
+        'Favorecer las inversiones y las alianzas',
+        'Valorizar las culturas caribeñas',
+        'Promover el turismo regional',
+        'Apoyar el emprendimiento femenino y juvenil',
+        'Dar visibilidad internacional a las iniciativas de cooperación',
+      ],
+      impactTitle: 'Impacto esperado',
+      impact: [
+        { label: 'Económico', items: ['Ocupación hotelera', 'Restauración', 'Transporte', 'Comercio', 'Artesanía'] },
+        { label: 'Cultural', items: ['Promoción de artistas', 'Valorización del patrimonio'] },
+        { label: 'Diplomático', items: ['Nuevas alianzas', 'Cooperación universitaria', 'Intercambios institucionales'] },
+      ],
+    },
+    grandeCaraibe: {
+      title: 'Cinco grandes ejes',
+      sub: 'De la cumbre institucional al festival de las culturas, un foro pensado como escaparate completo de la cooperación caribeña.',
+      poles: [
+        {
+          title: 'Cumbre institucional',
+          items: ['Ministros, alcaldes, parlamentarios', 'Organizaciones regionales, cámaras de comercio', 'Cooperación económica, movilidad, transición energética'],
+        },
+        {
+          title: 'Foro económico',
+          items: ['Empresas, inversionistas, bancos, startups', 'Encuentros B2B y citas con inversionistas', 'Salón de la innovación'],
+        },
+        {
+          title: 'Foro de mujeres',
+          items: ['Liderazgo y política', 'Emprendimiento y microfinanzas', 'Salud y digital'],
+        },
+        {
+          title: 'Foro de la juventud',
+          items: ['Universidades, escuelas, asociaciones', 'Concursos de oratoria, hackathon', 'Simulaciones diplomáticas'],
+        },
+        {
+          title: 'Festival de las culturas caribeñas',
+          items: ['Un pabellón por territorio', 'Gastronomía, artesanía, música, danza', 'Turismo y tradiciones'],
+        },
+      ],
+      missTitle: 'Miss Caribe Internacional',
+      missDesc:
+        'El certamen se integra al foro: las candidatas se convierten en embajadoras de su territorio, evaluadas por su presentación, su discurso, un proyecto de cooperación y una entrevista con el jurado.',
+      prizesTitle: 'Los premios',
+      prizes: [
+        'Miss Caribe Internacional',
+        'Premio Liderazgo',
+        'Premio Innovación',
+        'Premio Cultura',
+        'Premio Medio Ambiente',
+        'Premio Solidaridad',
+        'Premio Emprendimiento',
+        'Premio Diplomacia',
+      ],
+    },
+    guadeloupe: {
+      title: 'Guadalupe, encrucijada del Gran Caribe',
+      sub: 'Una primera edición piloto para consolidar el foro antes de extenderlo progresivamente a los demás territorios.',
+      duration: 'Duración: 3 días',
+      days: [
+        {
+          label: 'Día 1',
+          title: 'Cooperación económica',
+          items: ['Apertura oficial (Región, Prefecto, cónsules)', 'Conferencias: comercio, exportación, economía azul', 'Encuentros B2B'],
+        },
+        {
+          label: 'Día 2',
+          title: 'Juventud y mujeres',
+          items: ['Liderazgo femenino', 'Emprendimiento', 'Entrega de los Premios de la Cooperación'],
+        },
+        {
+          label: 'Día 3',
+          title: 'Cultura y turismo',
+          items: ['Aldea caribeña, un stand por territorio', 'Gastronomía, artesanía, música', 'Elección de Miss Guadalupe Cooperación'],
+        },
+      ],
+      missNote:
+        'Una embajadora de la cooperación regional, y no un certamen que compita con Miss Guadalupe: las candidatas son evaluadas por su proyecto, su conocimiento del Caribe y su capacidad de representar el territorio.',
+      prizesTitle: 'Los premios',
+      prizes: [
+        'Embajadora de la Cooperación',
+        'Premio al Liderazgo',
+        'Premio a la Innovación',
+        'Premio Cultura',
+        'Premio Turismo',
+        'Premio Juventud',
+      ],
+      budgetLabel: 'Presupuesto estimado',
+      budgetValue: '80 000 € – 150 000 €',
+      partnersTitle: 'Socios previstos',
+      partners: [
+        'Región Guadalupe',
+        'Departamento',
+        'Mancomunidades',
+        'Municipios',
+        'Cámaras consulares',
+        'Universidades',
+        'Actores del turismo',
+        'Empresas locales',
+      ],
+    },
+  },
   contact: {
     eyebrow: 'Contacto',
     title: 'Trabajemos juntos',
     sub: 'Con base en Francia, disponible para misiones en Europa, el Caribe y a nivel internacional. Hablemos de su proyecto.',
+    whatsappLabel: 'Escribir por WhatsApp',
+    whatsappMessage: 'Hola Lydie, me gustaría hablar sobre un proyecto.',
     emailLabel: 'Enviar un email',
     linkedinLabel: 'Seguirme en LinkedIn',
     location: 'Francia',
@@ -431,6 +719,7 @@ const en: Copy = {
     expertise: 'Expertise',
     services: 'Services',
     career: 'Career',
+    forum: 'Caribbean Forum',
     contact: 'Contact',
   },
   hero: {
@@ -574,10 +863,125 @@ const en: Copy = {
     langsNote: 'Support available in four languages.',
     langs: ['French', 'Spanish', 'English', 'Portuguese'],
   },
+  forum: {
+    eyebrow: 'Flagship initiative',
+    title: 'Caribbean Forum for Cooperation and Development',
+    intro:
+      "An annual gathering designed to bring together institutions, businesses, women, youth and cultures from the Greater Caribbean around one shared ambition: building tomorrow's Caribbean together.",
+    tabs: ['Vision', 'The Greater Caribbean Forum', 'Pilot edition: Guadeloupe'],
+    vision: {
+      theme: "Building tomorrow's Caribbean together",
+      durationLocation:
+        '5 days, hosted in rotation each year (Dominican Republic, Guadeloupe, Martinique, Saint Lucia, Barbados, Jamaica...).',
+      objectivesTitle: 'The objectives',
+      objectives: [
+        'Strengthen exchange between Caribbean territories',
+        'Encourage investment and partnerships',
+        'Showcase Caribbean cultures',
+        'Promote regional tourism',
+        "Support women's and youth entrepreneurship",
+        'Give international visibility to cooperation initiatives',
+      ],
+      impactTitle: 'Expected impact',
+      impact: [
+        { label: 'Economic', items: ['Hotel occupancy', 'Catering', 'Transport', 'Trade', 'Crafts'] },
+        { label: 'Cultural', items: ['Artist promotion', 'Heritage showcasing'] },
+        { label: 'Diplomatic', items: ['New partnerships', 'Academic cooperation', 'Institutional exchange'] },
+      ],
+    },
+    grandeCaraibe: {
+      title: 'Five flagship tracks',
+      sub: 'From the institutional summit to the culture festival, a forum built as a full showcase of Caribbean cooperation.',
+      poles: [
+        {
+          title: 'Institutional summit',
+          items: ['Ministers, mayors, members of parliament', 'Regional organisations, chambers of commerce', 'Economic cooperation, mobility, energy transition'],
+        },
+        {
+          title: 'Economic forum',
+          items: ['Businesses, investors, banks, start-ups', 'B2B meetings and investor meetings', 'Innovation showcase'],
+        },
+        {
+          title: "Women's forum",
+          items: ['Leadership and politics', 'Entrepreneurship and microfinance', 'Health and digital'],
+        },
+        {
+          title: 'Youth forum',
+          items: ['Universities, schools, associations', 'Public speaking contests, hackathon', 'Diplomatic simulations'],
+        },
+        {
+          title: 'Caribbean culture festival',
+          items: ['One pavilion per territory', 'Gastronomy, crafts, music, dance', 'Tourism and traditions'],
+        },
+      ],
+      missTitle: 'Miss Caribbean International',
+      missDesc:
+        'The pageant is built into the forum: contestants become ambassadors for their territory, judged on their presentation, a speech, a cooperation project and an interview with the jury.',
+      prizesTitle: 'The awards',
+      prizes: [
+        'Miss Caribbean International',
+        'Leadership Award',
+        'Innovation Award',
+        'Culture Award',
+        'Environment Award',
+        'Solidarity Award',
+        'Entrepreneurship Award',
+        'Diplomacy Award',
+      ],
+    },
+    guadeloupe: {
+      title: 'Guadeloupe, crossroads of the Greater Caribbean',
+      sub: 'A pilot first edition to establish the forum before progressively extending it to other territories.',
+      duration: 'Duration: 3 days',
+      days: [
+        {
+          label: 'Day 1',
+          title: 'Economic cooperation',
+          items: ['Official opening (Region, Prefect, consuls)', 'Conferences: trade, export, blue economy', 'B2B meetings'],
+        },
+        {
+          label: 'Day 2',
+          title: 'Youth and women',
+          items: ["Women's leadership", 'Entrepreneurship', 'Cooperation Awards ceremony'],
+        },
+        {
+          label: 'Day 3',
+          title: 'Culture and tourism',
+          items: ['Caribbean village, one booth per territory', 'Gastronomy, crafts, music', 'Miss Guadeloupe Cooperation election'],
+        },
+      ],
+      missNote:
+        'An ambassador for regional cooperation, not a competing pageant to Miss Guadeloupe: contestants are judged on their project, their knowledge of the Caribbean and their ability to represent the territory.',
+      prizesTitle: 'The awards',
+      prizes: [
+        'Cooperation Ambassador',
+        'Leadership Award',
+        'Innovation Award',
+        'Culture Award',
+        'Tourism Award',
+        'Youth Award',
+      ],
+      budgetLabel: 'Estimated budget',
+      budgetValue: '€80,000 – €150,000',
+      partnersTitle: 'Potential partners',
+      partners: [
+        'Guadeloupe Region',
+        'Département',
+        'Intermunicipal communities',
+        'Municipalities',
+        'Chambers of commerce',
+        'Universities',
+        'Tourism stakeholders',
+        'Local businesses',
+      ],
+    },
+  },
   contact: {
     eyebrow: 'Contact',
     title: 'Let us work together',
     sub: 'Based in France, available for assignments in Europe, the Caribbean and worldwide. Tell me about your project.',
+    whatsappLabel: 'Message on WhatsApp',
+    whatsappMessage: "Hello Lydie, I'd like to talk about a project.",
     emailLabel: 'Send an email',
     linkedinLabel: 'Follow me on LinkedIn',
     location: 'France',

@@ -7,6 +7,7 @@ import { ServicesGallery } from '@/components/ServicesGallery'
 import { About } from '@/components/About'
 import { Career } from '@/components/Career'
 import { Education } from '@/components/Education'
+import { Forum } from '@/components/Forum'
 import { Contact } from '@/components/Contact'
 import { Footer } from '@/components/Footer'
 
@@ -22,6 +23,7 @@ export default function App() {
         <About />
         <Career />
         <Education />
+        <Forum />
         <Contact />
       </main>
       <Footer />

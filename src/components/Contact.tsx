@@ -1,7 +1,7 @@
 import { Mail, MapPin } from 'lucide-react'
 import { useLang } from '@/i18n'
-import { CONTACT_EMAIL, LINKEDIN_URL } from '@/config'
-import { LinkedInIcon } from '@/components/icons'
+import { CONTACT_EMAIL, LINKEDIN_URL, buildWhatsAppLink } from '@/config'
+import { LinkedInIcon, WhatsAppIcon } from '@/components/icons'
 import { Reveal } from '@/components/Reveal'
 
 export function Contact() {
@@ -20,10 +20,19 @@ export function Contact() {
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <a
-                href={`mailto:${CONTACT_EMAIL}`}
+                href={buildWhatsAppLink(t.contact.whatsappMessage)}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-2.5 rounded-full bg-ink-950 px-8 py-4 text-sm font-semibold tracking-wide text-white transition-colors duration-300 ease-smooth hover:bg-gold-600"
               >
-                <Mail size={17} />
+                <WhatsAppIcon size={17} />
+                {t.contact.whatsappLabel}
+              </a>
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="inline-flex items-center gap-2.5 rounded-full border border-ink-950/20 bg-white/70 px-8 py-4 text-sm font-medium tracking-wide text-ink-900 transition-colors duration-300 ease-smooth hover:border-gold-500 hover:text-gold-700"
+              >
+                <Mail size={16} />
                 {t.contact.emailLabel}
               </a>
               <a

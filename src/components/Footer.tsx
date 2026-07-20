@@ -1,7 +1,7 @@
 import { Mail, MapPin } from 'lucide-react'
 import { useLang } from '@/i18n'
-import { CONTACT_EMAIL, LINKEDIN_URL } from '@/config'
-import { LinkedInIcon } from '@/components/icons'
+import { CONTACT_EMAIL, LINKEDIN_URL, buildWhatsAppLink } from '@/config'
+import { LinkedInIcon, WhatsAppIcon } from '@/components/icons'
 
 export function Footer() {
   const { t } = useLang()
@@ -10,6 +10,7 @@ export function Footer() {
     { href: '#services', label: t.nav.services },
     { href: '#about', label: t.nav.about },
     { href: '#career', label: t.nav.career },
+    { href: '#forum', label: t.nav.forum },
     { href: '#contact', label: t.nav.contact },
   ]
 
@@ -24,6 +25,15 @@ export function Footer() {
             {t.footer.role}
           </p>
           <div className="mt-6 flex items-center gap-3">
+            <a
+              href={buildWhatsAppLink(t.contact.whatsappMessage)}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-ink-950/15 text-ink-700 transition-colors duration-300 ease-smooth hover:border-gold-500 hover:text-gold-600"
+            >
+              <WhatsAppIcon size={16} />
+            </a>
             <a
               href={LINKEDIN_URL}
               target="_blank"

@@ -21,6 +21,7 @@ export function Navbar() {
     { href: '#services', label: t.nav.services },
     { href: '#about', label: t.nav.about },
     { href: '#career', label: t.nav.career },
+    { href: '#forum', label: t.nav.forum },
     { href: '#contact', label: t.nav.contact },
   ]
 
