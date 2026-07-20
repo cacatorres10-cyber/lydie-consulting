@@ -33,25 +33,30 @@ export function ServicesGallery() {
   }))
 
   return (
-    <section id="services" className="glow-gold scroll-mt-0 relative bg-ink-950" style={{ height: '320vh' }}>
+    <section
+      id="showcase"
+      className="bg-dots relative border-y border-ink-950/10 bg-paper"
+      style={{ height: '320vh' }}
+    >
       <div className="sticky top-0 flex h-screen w-full flex-col items-center justify-center overflow-hidden">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 z-10 h-56 bg-gradient-to-b from-ink-950 via-ink-950/70 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 z-10 h-56 bg-gradient-to-b from-paper via-paper/80 to-transparent"
         />
         <div className="pointer-events-none absolute inset-x-0 top-0 z-20 px-5 pt-20 text-center">
-          <p className="eyebrow text-gold-400">{t.services.eyebrow}</p>
-          <h2 className="mt-3 font-display text-4xl font-medium text-paper md:text-6xl">
+          <p className="eyebrow text-gold-600">{t.services.eyebrow}</p>
+          <h2 className="mt-3 font-display text-4xl font-medium italic text-ink-950 md:text-6xl">
             {t.services.title}
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-paper/50 md:text-base">
-            {t.services.sub}
-          </p>
+          <p className="mx-auto mt-3 max-w-xl text-sm text-ink-500 md:text-base">{t.services.sub}</p>
         </div>
         <div className="h-full w-full translate-y-16 md:translate-y-20">
           <CircularGallery items={items} radius={radius} autoRotateSpeed={0.05} />
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-ink-950 to-transparent" />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-paper to-transparent"
+        />
       </div>
     </section>
   )

@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: 40 33% 97%;
-  --foreground: 216 57% 9%;
-  --card: 215 47% 12%;
-  --card-foreground: 40 33% 97%;
-  --muted: 40 20% 92%;
-  --muted-foreground: 216 20% 38%;
-  --border: 216 25% 24%;
+  --background: 40 27% 98%;
+  --foreground: 27 20% 6%;
+  --card: 0 0% 100%;
+  --card-foreground: 27 20% 6%;
+  --muted: 40 15% 93%;
+  --muted-foreground: 30 10% 38%;
+  --border: 30 10% 88%;
 }
 
 html {
@@ -17,41 +17,44 @@ html {
 }
 
 body {
-  @apply bg-paper font-sans text-ink-950 antialiased;
+  @apply bg-paper font-sans text-ink-900 antialiased;
 }
 
 ::selection {
-  @apply bg-gold-300 text-ink-950;
+  @apply bg-gold-200 text-ink-950;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a1424;
+  background: #f3ede2;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2d4368;
+  background: #c9b8a0;
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #cfa958;
+  background: #a78b71;
 }
 
 .eyebrow {
   @apply text-xs font-semibold uppercase tracking-[0.32em];
 }
 
-/* Soft radial glow used on dark sections (background-image only, so it
-   stacks on top of the section's background-color) */
-.glow-gold {
-  background-image:
-    radial-gradient(ellipse 60% 45% at 50% 0%, rgba(207, 169, 88, 0.14), transparent 70%),
-    radial-gradient(ellipse 50% 40% at 85% 100%, rgba(74, 106, 155, 0.18), transparent 70%);
+/* Radial dot grid, 32px spacing (light adaptation of the reference spec) */
+.bg-dots {
+  background-image: radial-gradient(rgba(18, 16, 12, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
-/* Subtle paper texture for light sections */
-.texture-paper {
-  background-image: radial-gradient(rgba(10, 20, 36, 0.045) 1px, transparent 1px);
-  background-size: 22px 22px;
+/* Glassmorphism on white */
+.glass-card {
+  @apply rounded-3xl border border-ink-950/10 bg-white/60 backdrop-blur-md;
+  box-shadow: 0 8px 40px rgba(18, 16, 12, 0.06);
+}
+
+/* Central bronze glow */
+.glow-center {
+  box-shadow: 0 0 100px rgba(167, 139, 113, 0.35), 0 8px 40px rgba(18, 16, 12, 0.08);
 }

@@ -118,7 +118,7 @@ const CircularGallery = React.forwardRef<HTMLDivElement, CircularGalleryProps>(
                   transition: 'opacity 0.3s linear',
                 }}
               >
-                <div className="relative w-full h-full rounded-xl shadow-2xl overflow-hidden group border border-white/10 bg-ink-900/40 backdrop-blur-lg">
+                <div className="relative w-full h-full rounded-3xl shadow-2xl overflow-hidden group border border-ink-950/10 bg-ink-900/10 backdrop-blur-lg">
                   <img
                     src={item.photo.url}
                     alt={item.photo.text}

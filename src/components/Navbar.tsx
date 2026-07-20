@@ -18,40 +18,42 @@ export function Navbar() {
   }, [])
 
   const links = [
-    { href: '#about', label: t.nav.about },
-    { href: '#expertise', label: t.nav.expertise },
     { href: '#services', label: t.nav.services },
+    { href: '#about', label: t.nav.about },
     { href: '#career', label: t.nav.career },
     { href: '#contact', label: t.nav.contact },
   ]
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'border-b border-ink-950/10 bg-paper/85 shadow-sm backdrop-blur-md' : ''
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-smooth ${
+        scrolled ? 'border-b border-ink-950/10 bg-white/70 shadow-sm backdrop-blur-md' : ''
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-20 md:px-8">
+      <div className="relative mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-20 md:px-8">
         <a href="#" className="group flex items-baseline gap-1.5">
-          <span className="font-display text-2xl font-semibold italic text-ink-950">Lydie</span>
-          <span className="font-display text-2xl text-gold-600 transition-colors group-hover:text-gold-500">
+          <span className="font-display text-2xl font-bold italic text-ink-950">Lydie</span>
+          <span className="font-display text-2xl font-bold italic text-gold-500 transition-colors group-hover:text-gold-400">
             M.
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Navigation principale">
+        <nav
+          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 lg:flex"
+          aria-label="Navigation principale"
+        >
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-[13px] font-medium uppercase tracking-[0.18em] text-ink-950/70 transition-colors hover:text-gold-700"
+              className="text-[11px] font-medium uppercase tracking-[0.22em] text-ink-600 transition-colors hover:text-gold-600"
             >
               {l.label}
             </a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-4">
           <div className="flex items-center gap-1" role="group" aria-label="Langue">
             {LANGS.map((l) => (
               <button
@@ -59,15 +61,19 @@ export function Navbar() {
                 onClick={() => setLang(l)}
                 aria-pressed={lang === l}
                 className={`cursor-pointer rounded-full px-2.5 py-1.5 text-[11px] font-semibold uppercase tracking-widest transition-colors ${
-                  lang === l
-                    ? 'bg-ink-950 text-gold-300'
-                    : 'text-ink-950/50 hover:text-ink-950'
+                  lang === l ? 'bg-ink-950 text-gold-200' : 'text-ink-500 hover:text-ink-950'
                 }`}
               >
                 {l}
               </button>
             ))}
           </div>
+          <a
+            href="#contact"
+            className="hidden rounded-full bg-ink-950 px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 ease-smooth hover:bg-gold-600 md:inline-flex"
+          >
+            {t.nav.contact}
+          </a>
           <button
             onClick={() => setOpen(true)}
             className="cursor-pointer p-2 text-ink-950 lg:hidden"
@@ -79,14 +85,14 @@ export function Navbar() {
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-50 flex flex-col bg-ink-950 px-8 py-6 lg:hidden">
+        <div className="bg-dots fixed inset-0 z-50 flex flex-col bg-paper px-8 py-6 lg:hidden">
           <div className="flex items-center justify-between">
-            <span className="font-display text-2xl italic text-paper">
-              Lydie <span className="text-gold-400">M.</span>
+            <span className="font-display text-2xl font-bold italic text-ink-950">
+              Lydie <span className="text-gold-500">M.</span>
             </span>
             <button
               onClick={() => setOpen(false)}
-              className="cursor-pointer p-2 text-paper"
+              className="cursor-pointer p-2 text-ink-950"
               aria-label="Fermer le menu"
             >
               <X size={24} />
@@ -98,7 +104,7 @@ export function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="animate-fade-up font-display text-3xl text-paper transition-colors hover:text-gold-300"
+                className="animate-fade-up font-display text-3xl italic text-ink-950 transition-colors hover:text-gold-600"
                 style={{ animationDelay: `${i * 70}ms` }}
               >
                 {l.label}
@@ -115,8 +121,8 @@ export function Navbar() {
                 }}
                 className={`cursor-pointer rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-widest transition-colors ${
                   lang === l
-                    ? 'border-gold-400 bg-gold-500 text-ink-950'
-                    : 'border-paper/25 text-paper/70'
+                    ? 'border-gold-500 bg-ink-950 text-gold-200'
+                    : 'border-ink-950/20 text-ink-600'
                 }`}
               >
                 {l}

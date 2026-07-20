@@ -13,7 +13,7 @@ export function Career() {
             <span aria-hidden="true" className="h-px w-10 bg-gold-500" />
             {t.career.eyebrow}
           </p>
-          <h2 className="mt-5 font-display text-4xl font-medium text-ink-950 md:text-5xl">
+          <h2 className="mt-5 font-display text-4xl font-medium italic text-ink-950 md:text-5xl">
             {t.career.title}
           </h2>
           <p className="mt-4 max-w-xl text-ink-950/60">{t.career.sub}</p>

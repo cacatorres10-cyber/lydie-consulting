@@ -24,6 +24,8 @@ export interface Copy {
     eyebrow: string
     name: string
     headline: string
+    headlineGold: string
+    available: string
     sub: string
     ctaPrimary: string
     ctaSecondary: string
@@ -98,6 +100,8 @@ const fr: Copy = {
     eyebrow: 'Consultante internationale · France',
     name: 'Lydie Lebron Sanchez M.',
     headline: 'Relier les institutions, les entreprises et les personnes au delà des frontières.',
+    headlineGold: 'au delà des frontières',
+    available: 'Disponible pour de nouvelles missions',
     sub: "J'accompagne les institutions, les entreprises et les particuliers en diplomatie, coopération, communication politique, tourisme, immigration, affaires consulaires, microfinance, levée de fonds et gestion de crise.",
     ctaPrimary: 'Discutons de votre projet',
     ctaSecondary: 'LinkedIn',
@@ -263,6 +267,8 @@ const es: Copy = {
     eyebrow: 'Consultora internacional · Francia',
     name: 'Lydie Lebron Sanchez M.',
     headline: 'Conectar instituciones, empresas y personas más allá de las fronteras.',
+    headlineGold: 'más allá de las fronteras',
+    available: 'Disponible para nuevas misiones',
     sub: 'Acompaño a instituciones, empresas y particulares en diplomacia, cooperación, comunicación política, turismo, inmigración, asuntos consulares, microfinanzas, captación de fondos y gestión de crisis.',
     ctaPrimary: 'Hablemos de su proyecto',
     ctaSecondary: 'LinkedIn',
@@ -428,6 +434,8 @@ const en: Copy = {
     eyebrow: 'International consultant · France',
     name: 'Lydie Lebron Sanchez M.',
     headline: 'Connecting institutions, businesses and people across borders.',
+    headlineGold: 'across borders',
+    available: 'Available for new assignments',
     sub: 'I support institutions, businesses and individuals in diplomacy, cooperation, political communication, tourism, immigration, consular affairs, microfinance, fundraising and crisis management.',
     ctaPrimary: 'Let us talk about your project',
     ctaSecondary: 'LinkedIn',

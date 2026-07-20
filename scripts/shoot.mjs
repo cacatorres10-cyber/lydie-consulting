@@ -15,7 +15,6 @@ await new Promise((r) => setTimeout(r, 3500))
 const targets = [
   ['hero', null],
   ['about', '#about'],
-  ['expertise', '#expertise'],
   ['services', '#services'],
   ['career', '#career'],
   ['education', '#education'],
@@ -34,14 +33,20 @@ for (const [name, sel] of targets) {
   console.log(`captured ${name}`)
 }
 
+// Reseau du hero (noeud central + satellites)
+await page.evaluate(() => window.scrollTo(0, 640))
+await new Promise((r) => setTimeout(r, 2200))
+await page.screenshot({ path: `${OUT}/pp-hero-network.png` })
+console.log('captured hero-network')
+
 // Vue au milieu du scroll sticky de la galerie circulaire
 await page.evaluate(() => {
-  const el = document.querySelector('#services')
+  const el = document.querySelector('#showcase')
   if (el) window.scrollTo(0, el.offsetTop + el.offsetHeight * 0.4)
 })
 await new Promise((r) => setTimeout(r, 2200))
-await page.screenshot({ path: `${OUT}/pp-services-mid.png` })
-console.log('captured services-mid')
+await page.screenshot({ path: `${OUT}/pp-showcase-mid.png` })
+console.log('captured showcase-mid')
 
 // Versions ES et EN pour valider le toggle
 for (const code of ['ES', 'EN']) {
