@@ -171,7 +171,7 @@ const fr: Copy = {
     ctaPrimary: 'Discutons de votre projet',
     ctaSecondary: 'LinkedIn',
     stats: [
-      { value: '15+', label: "années d'expérience" },
+      { value: '40+', label: "années d'expérience" },
       { value: '12', label: "domaines d'expertise" },
       { value: '4', label: 'langues de travail' },
     ],
@@ -194,7 +194,7 @@ const fr: Copy = {
     eyebrow: 'À propos',
     title: 'Une diplomatie du concret',
     quote: "Chaque projet international est d'abord une rencontre entre des cultures, des institutions et des personnes.",
-    p1: "Formatrice et consultante depuis 2011, j'interviens à la croisée de la diplomatie, de la coopération et du développement de projets. Depuis 2017, je forme les élues locales au sein de l'IEPP à Paris et j'accompagne des organisations publiques et privées, en France comme à l'international.",
+    p1: "Après vingt-neuf ans au service de la Région Guadeloupe, dont un mandat d'adjointe au maire de Trois-Rivières, je me consacre depuis 2011 à la formation et au conseil, à la croisée de la diplomatie, de la coopération et du développement de projets. Depuis 2017, je forme les élues locales au sein de l'IEPP à Paris et j'accompagne des organisations publiques et privées, en France comme à l'international.",
     p2: "Formée à l'Université des Antilles et à l'Université Bordeaux 2, je porte une attention particulière à la coopération caribéenne et internationale. Mon approche associe rigueur institutionnelle, sens du terrain et culture du résultat.",
     p3: "De la stratégie à la mise en œuvre, chaque mission est construite sur mesure: analyse, plan d'action, accompagnement et transmission.",
     chipsTitle: 'Compétences clés',
@@ -252,7 +252,7 @@ const fr: Copy = {
   career: {
     eyebrow: 'Parcours',
     title: 'Expérience professionnelle',
-    sub: "Quinze ans de formation, de conseil et de conduite de projets.",
+    sub: 'Quarante ans de service public, de formation et de conduite de projets.',
     items: [
       {
         period: '2017 · aujourd’hui',
@@ -284,10 +284,24 @@ const fr: Copy = {
       },
       {
         period: '2016 · 2018',
-        role: 'Propriétaire',
+        role: 'Chef contrôle qualité',
         org: 'Axeo Services',
         place: 'Le Perreux-sur-Marne',
-        desc: "Direction d'une agence de services de proximité.",
+        desc: "Contrôle qualité et suivi des prestations d'une agence de services à la personne.",
+      },
+      {
+        period: '1986 · 2015',
+        role: 'Responsable de service, cadre territoriale',
+        org: 'Région Guadeloupe',
+        place: 'Basse-Terre, Guadeloupe',
+        desc: 'Documentation, protocole, cabinet des présidents, affaires scolaires et formation professionnelle.',
+      },
+      {
+        period: '2001 · 2008',
+        role: 'Adjointe au maire',
+        org: 'Ville de Trois-Rivières',
+        place: 'Trois-Rivières, Guadeloupe',
+        desc: "Déléguée au développement économique, aux affaires scolaires et aux transports ; présidente de la commission d'appel d'offres.",
       },
     ],
   },
@@ -485,7 +499,7 @@ const es: Copy = {
     ctaPrimary: 'Hablemos de su proyecto',
     ctaSecondary: 'LinkedIn',
     stats: [
-      { value: '15+', label: 'años de experiencia' },
+      { value: '40+', label: 'años de experiencia' },
       { value: '12', label: 'áreas de especialización' },
       { value: '4', label: 'idiomas de trabajo' },
     ],
@@ -508,7 +522,7 @@ const es: Copy = {
     eyebrow: 'Sobre mí',
     title: 'Una diplomacia de lo concreto',
     quote: 'Cada proyecto internacional es, ante todo, un encuentro entre culturas, instituciones y personas.',
-    p1: 'Formadora y consultora desde 2011, trabajo en el cruce de la diplomacia, la cooperación y el desarrollo de proyectos. Desde 2017 formo a electas locales en el IEPP de París y acompaño a organizaciones públicas y privadas, en Francia y a nivel internacional.',
+    p1: 'Después de veintinueve años al servicio de la Región Guadalupe, incluido un mandato como teniente de alcalde de Trois-Rivières, me dedico desde 2011 a la formación y la consultoría, en el cruce de la diplomacia, la cooperación y el desarrollo de proyectos. Desde 2017 formo a electas locales en el IEPP de París y acompaño a organizaciones públicas y privadas, en Francia y a nivel internacional.',
     p2: 'Formada en la Université des Antilles y en la Université Bordeaux 2, presto especial atención a la cooperación caribeña e internacional. Mi enfoque combina rigor institucional, sentido práctico y cultura de resultados.',
     p3: 'De la estrategia a la ejecución, cada misión se construye a medida: análisis, plan de acción, acompañamiento y transmisión.',
     chipsTitle: 'Competencias clave',
@@ -566,7 +580,7 @@ const es: Copy = {
   career: {
     eyebrow: 'Trayectoria',
     title: 'Experiencia profesional',
-    sub: 'Quince años de formación, consultoría y gestión de proyectos.',
+    sub: 'Cuarenta años de servicio público, formación y gestión de proyectos.',
     items: [
       {
         period: '2017 · actualidad',
@@ -598,10 +612,24 @@ const es: Copy = {
       },
       {
         period: '2016 · 2018',
-        role: 'Propietaria',
+        role: 'Jefa de control de calidad',
         org: 'Axeo Services',
         place: 'Le Perreux-sur-Marne',
-        desc: 'Dirección de una agencia de servicios de proximidad.',
+        desc: 'Control de calidad y seguimiento de las prestaciones de una agencia de servicios a domicilio.',
+      },
+      {
+        period: '1986 · 2015',
+        role: 'Responsable de servicio, cargo territorial',
+        org: 'Región Guadalupe',
+        place: 'Basse-Terre, Guadalupe',
+        desc: 'Documentación, protocolo, gabinete de presidentes, asuntos escolares y formación profesional.',
+      },
+      {
+        period: '2001 · 2008',
+        role: 'Teniente de alcalde',
+        org: 'Ciudad de Trois-Rivières',
+        place: 'Trois-Rivières, Guadalupe',
+        desc: 'Delegada de desarrollo económico, asuntos escolares y transporte; presidenta de la comisión de licitaciones.',
       },
     ],
   },
@@ -799,7 +827,7 @@ const en: Copy = {
     ctaPrimary: 'Let us talk about your project',
     ctaSecondary: 'LinkedIn',
     stats: [
-      { value: '15+', label: 'years of experience' },
+      { value: '40+', label: 'years of experience' },
       { value: '12', label: 'areas of expertise' },
       { value: '4', label: 'working languages' },
     ],
@@ -822,7 +850,7 @@ const en: Copy = {
     eyebrow: 'About',
     title: 'Diplomacy, made practical',
     quote: 'Every international project is, above all, a meeting of cultures, institutions and people.',
-    p1: 'A trainer and consultant since 2011, I work at the crossroads of diplomacy, cooperation and project development. Since 2017 I have been training locally elected officials at the IEPP in Paris, while supporting public and private organisations in France and internationally.',
+    p1: 'After twenty-nine years serving the Région Guadeloupe, including a term as Deputy Mayor of Trois-Rivières, I have devoted myself since 2011 to training and consulting, at the crossroads of diplomacy, cooperation and project development. Since 2017 I have been training locally elected officials at the IEPP in Paris, while supporting public and private organisations in France and internationally.',
     p2: 'Educated at the Université des Antilles and the Université Bordeaux 2, I pay particular attention to Caribbean and international cooperation. My approach combines institutional rigour, field experience and a focus on results.',
     p3: 'From strategy to delivery, every assignment is tailor made: analysis, action plan, hands-on support and knowledge transfer.',
     chipsTitle: 'Core skills',
@@ -880,7 +908,7 @@ const en: Copy = {
   career: {
     eyebrow: 'Career',
     title: 'Professional experience',
-    sub: 'Fifteen years of training, consulting and project leadership.',
+    sub: 'Forty years of public service, training and project leadership.',
     items: [
       {
         period: '2017 · present',
@@ -912,10 +940,24 @@ const en: Copy = {
       },
       {
         period: '2016 · 2018',
-        role: 'Owner',
+        role: 'Quality Control Manager',
         org: 'Axeo Services',
         place: 'Le Perreux-sur-Marne',
-        desc: 'Ran a local home-services agency.',
+        desc: 'Quality control and service oversight for a home-services agency.',
+      },
+      {
+        period: '1986 · 2015',
+        role: 'Department head, territorial civil servant',
+        org: 'Région Guadeloupe',
+        place: 'Basse-Terre, Guadeloupe',
+        desc: 'Documentation, protocol, office of the regional presidents, school affairs and vocational training.',
+      },
+      {
+        period: '2001 · 2008',
+        role: 'Deputy Mayor',
+        org: 'Town of Trois-Rivières',
+        place: 'Trois-Rivières, Guadeloupe',
+        desc: 'In charge of economic development, school affairs and transport; chaired the public tender board.',
       },
     ],
   },
