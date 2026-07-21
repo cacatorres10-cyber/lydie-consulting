@@ -1,4 +1,4 @@
-# Lydie Lebron Sanchez M. | Consultante internationale
+# Lydie Monthouel Lebron de Guarinos | Consultante internationale
 
 Portfolio + services one-page site (FR / ES / EN) for an international consultant based in France: diplomacy, cooperation, training, migration and consular services, real estate, microfinance, fundraising, events, languages and wellbeing.
 

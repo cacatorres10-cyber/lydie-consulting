@@ -113,7 +113,7 @@ export function Footer() {
 
       <div className="border-t border-ink-950/10 py-6">
         <p className="mx-auto max-w-7xl px-5 text-center text-xs text-ink-400 md:px-8 md:text-left">
-          © 2026 Lydie Lebron Sanchez M. · {t.footer.rights}
+          © 2026 Lydie Monthouel Lebron de Guarinos · {t.footer.rights}
         </p>
       </div>
     </footer>

@@ -149,7 +149,7 @@ export interface Copy {
 
 const fr: Copy = {
   meta: {
-    title: 'Lydie Lebron Sanchez M. | Consultante internationale',
+    title: 'Lydie Monthouel Lebron de Guarinos | Consultante internationale',
     description:
       'Consultante internationale. Diplomatie, coopération, formation, immigration, affaires consulaires, immobilier, microfinance, levée de fonds et gestion de crise.',
   },
@@ -163,7 +163,7 @@ const fr: Copy = {
   },
   hero: {
     eyebrow: 'Consultante internationale · France',
-    name: 'Lydie Lebron Sanchez M.',
+    name: 'Lydie Monthouel Lebron de Guarinos',
     headline: 'Relier les institutions, les entreprises et les personnes au delà des frontières.',
     headlineGold: 'au delà des frontières',
     available: 'Disponible pour de nouvelles missions',
@@ -463,7 +463,7 @@ const fr: Copy = {
 
 const es: Copy = {
   meta: {
-    title: 'Lydie Lebron Sanchez M. | Consultora internacional',
+    title: 'Lydie Monthouel Lebron de Guarinos | Consultora internacional',
     description:
       'Consultora internacional. Diplomacia, cooperación, formación, inmigración, asuntos consulares, bienes raíces, microfinanzas, captación de fondos y gestión de crisis.',
   },
@@ -477,7 +477,7 @@ const es: Copy = {
   },
   hero: {
     eyebrow: 'Consultora internacional · Francia',
-    name: 'Lydie Lebron Sanchez M.',
+    name: 'Lydie Monthouel Lebron de Guarinos',
     headline: 'Conectar instituciones, empresas y personas más allá de las fronteras.',
     headlineGold: 'más allá de las fronteras',
     available: 'Disponible para nuevas misiones',
@@ -777,7 +777,7 @@ const es: Copy = {
 
 const en: Copy = {
   meta: {
-    title: 'Lydie Lebron Sanchez M. | International Consultant',
+    title: 'Lydie Monthouel Lebron de Guarinos | International Consultant',
     description:
       'International consultant. Diplomacy, cooperation, training, immigration, consular affairs, real estate, microfinance, fundraising and crisis management.',
   },
@@ -791,7 +791,7 @@ const en: Copy = {
   },
   hero: {
     eyebrow: 'International consultant · France',
-    name: 'Lydie Lebron Sanchez M.',
+    name: 'Lydie Monthouel Lebron de Guarinos',
     headline: 'Connecting institutions, businesses and people across borders.',
     headlineGold: 'across borders',
     available: 'Available for new assignments',
