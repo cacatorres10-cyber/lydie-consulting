@@ -158,7 +158,7 @@ const fr: Copy = {
     expertise: 'Expertise',
     services: 'Services',
     career: 'Parcours',
-    forum: 'Forum Caraïbe',
+    forum: 'Forum Amérique Latine & Caraïbe',
     contact: 'Contact',
   },
   hero: {
@@ -195,7 +195,7 @@ const fr: Copy = {
     title: 'Une diplomatie du concret',
     quote: "Chaque projet international est d'abord une rencontre entre des cultures, des institutions et des personnes.",
     p1: "Après vingt-neuf ans au service de la Région Guadeloupe, dont un mandat d'adjointe au maire de Trois-Rivières, je me consacre depuis 2011 à la formation et au conseil, à la croisée de la diplomatie, de la coopération et du développement de projets. Depuis 2017, je forme les élues locales au sein de l'IEPP à Paris et j'accompagne des organisations publiques et privées, en France comme à l'international.",
-    p2: "Formée à l'Université des Antilles et à l'Université Bordeaux 2, je porte une attention particulière à la coopération caribéenne et internationale. Mon approche associe rigueur institutionnelle, sens du terrain et culture du résultat.",
+    p2: "Formée à l'Université des Antilles et à l'Université Bordeaux 2, je porte une attention particulière à la coopération latino-américaine, caribéenne et internationale. Mon approche associe rigueur institutionnelle, sens du terrain et culture du résultat.",
     p3: "De la stratégie à la mise en œuvre, chaque mission est construite sur mesure: analyse, plan d'action, accompagnement et transmission.",
     chipsTitle: 'Compétences clés',
     chips: [
@@ -319,19 +319,19 @@ const fr: Copy = {
   },
   forum: {
     eyebrow: 'Projet phare',
-    title: 'Forum Caraïbe, Coopération & Développement',
+    title: 'Forum Amérique Latine & Caraïbe, Coopération & Développement',
     intro:
-      "Un rendez-vous annuel imaginé pour réunir institutions, entreprises, femmes, jeunesse et cultures de la Grande Caraïbe autour d'une ambition commune: construire ensemble la Caraïbe de demain.",
-    tabs: ['Vision', 'Le Forum Grande Caraïbe', 'Édition pilote : Guadeloupe', 'Académie Leadership'],
+      "Un rendez-vous annuel imaginé pour réunir institutions, entreprises, femmes, jeunesse et cultures d'Amérique latine et de la Grande Caraïbe autour d'une ambition commune: construire ensemble l'Amérique latine et la Caraïbe de demain.",
+    tabs: ['Vision', 'Le Forum Amérique Latine & Caraïbe', 'Édition pilote : Guadeloupe', 'Académie Leadership'],
     vision: {
-      theme: 'Construire ensemble la Caraïbe de demain',
+      theme: "Construire ensemble l'Amérique latine et la Caraïbe de demain",
       durationLocation:
-        '5 jours, en alternance chaque année (République dominicaine, Guadeloupe, Martinique, Sainte-Lucie, Barbade, Jamaïque...).',
+        '5 jours, en alternance chaque année (République dominicaine, Guadeloupe, Martinique, Sainte-Lucie, Barbade, Jamaïque, Colombie, Panama, Costa Rica...).',
       objectivesTitle: 'Les objectifs',
       objectives: [
-        'Renforcer les échanges entre les territoires de la Caraïbe',
+        "Renforcer les échanges entre les territoires d'Amérique latine et de la Caraïbe",
         'Favoriser les investissements et les partenariats',
-        'Valoriser les cultures caribéennes',
+        'Valoriser les cultures latino-américaines et caribéennes',
         'Promouvoir le tourisme régional',
         "Soutenir l'entrepreneuriat féminin et des jeunes",
         'Donner une visibilité internationale aux initiatives de coopération',
@@ -345,7 +345,7 @@ const fr: Copy = {
     },
     grandeCaraibe: {
       title: 'Cinq grands pôles',
-      sub: "Du sommet institutionnel au festival des cultures, un forum pensé comme une vitrine complète de la coopération caribéenne.",
+      sub: "Du sommet institutionnel au festival des cultures, un forum pensé comme une vitrine complète de la coopération latino-américaine et caribéenne.",
       poles: [
         {
           title: 'Sommet institutionnel',
@@ -364,16 +364,16 @@ const fr: Copy = {
           items: ['Universités, écoles, associations', "Concours d'éloquence, hackathon", 'Simulations diplomatiques'],
         },
         {
-          title: 'Festival des cultures caribéennes',
+          title: 'Festival des cultures latino-américaines et caribéennes',
           items: ['Un pavillon par territoire', 'Gastronomie, artisanat, musique, danse', 'Tourisme et traditions'],
         },
       ],
-      missTitle: 'Miss Caraïbes Internationale',
+      missTitle: 'Miss Amérique Latine et Caraïbes',
       missDesc:
         'Le concours est intégré au forum: les candidates deviennent des ambassadrices de leur territoire, évaluées sur leur présentation, leur discours, un projet de coopération et un entretien avec le jury.',
       prizesTitle: 'Les prix',
       prizes: [
-        'Miss Caraïbes Internationale',
+        'Miss Amérique Latine et Caraïbes',
         'Prix Leadership',
         'Prix Innovation',
         'Prix Culture',
@@ -384,7 +384,7 @@ const fr: Copy = {
       ],
     },
     guadeloupe: {
-      title: 'La Guadeloupe, carrefour de la Grande Caraïbe',
+      title: "La Guadeloupe, carrefour de l'Amérique latine et de la Caraïbe",
       sub: 'Une première édition pilote pour ancrer le forum avant de l’étendre progressivement aux autres territoires.',
       duration: 'Durée : 3 jours',
       days: [
@@ -405,7 +405,7 @@ const fr: Copy = {
         },
       ],
       missNote:
-        'Une ambassadrice de la coopération régionale, et non un concours concurrent de Miss Guadeloupe: les candidates sont évaluées sur leur projet, leur connaissance de la Caraïbe et leur capacité à représenter le territoire.',
+        "Une ambassadrice de la coopération régionale, et non un concours concurrent de Miss Guadeloupe: les candidates sont évaluées sur leur projet, leur connaissance de l'Amérique latine et de la Caraïbe et leur capacité à représenter le territoire.",
       prizesTitle: 'Les prix',
       prizes: [
         'Ambassadrice de la Coopération',
@@ -430,10 +430,10 @@ const fr: Copy = {
       ],
     },
     academy: {
-      title: 'Académie Caribéenne de Leadership pour Femmes Élues',
+      title: 'Académie Latino-Américaine et Caribéenne de Leadership pour Femmes Élues',
       subtitle: 'Un programme de formation continue',
       intro:
-        "Pensée pour les conseillères, maires, députées et sénatrices de la Caraïbe, cette académie structure vingt thématiques clés de la gouvernance et du leadership politique, dans la continuité des formations d'élues menées depuis 2017.",
+        "Pensée pour les conseillères, maires, députées et sénatrices d'Amérique latine et de la Caraïbe, cette académie structure vingt thématiques clés de la gouvernance et du leadership politique, dans la continuité des formations d'élues menées depuis 2017.",
       topicsTitle: 'Les vingt thématiques',
       topics: [
         'Leadership politique et éthique',
@@ -462,7 +462,7 @@ const fr: Copy = {
   contact: {
     eyebrow: 'Contact',
     title: 'Travaillons ensemble',
-    sub: "Basée en France, disponible pour des missions en Europe, dans la Caraïbe et à l'international. Parlons de votre projet.",
+    sub: "Basée en France, disponible pour des missions en Europe, en Amérique latine, dans la Caraïbe et à l'international. Parlons de votre projet.",
     whatsappLabel: 'Écrire sur WhatsApp',
     whatsappMessage: 'Bonjour Lydie, je souhaite échanger sur un projet.',
     emailLabel: 'Envoyer un email',
@@ -486,7 +486,7 @@ const es: Copy = {
     expertise: 'Especialidades',
     services: 'Servicios',
     career: 'Trayectoria',
-    forum: 'Foro Caribe',
+    forum: 'Foro América Latina y Caribe',
     contact: 'Contacto',
   },
   hero: {
@@ -523,7 +523,7 @@ const es: Copy = {
     title: 'Una diplomacia de lo concreto',
     quote: 'Cada proyecto internacional es, ante todo, un encuentro entre culturas, instituciones y personas.',
     p1: 'Después de veintinueve años al servicio de la Región Guadalupe, incluido un mandato como teniente de alcalde de Trois-Rivières, me dedico desde 2011 a la formación y la consultoría, en el cruce de la diplomacia, la cooperación y el desarrollo de proyectos. Desde 2017 formo a electas locales en el IEPP de París y acompaño a organizaciones públicas y privadas, en Francia y a nivel internacional.',
-    p2: 'Formada en la Université des Antilles y en la Université Bordeaux 2, presto especial atención a la cooperación caribeña e internacional. Mi enfoque combina rigor institucional, sentido práctico y cultura de resultados.',
+    p2: 'Formada en la Université des Antilles y en la Université Bordeaux 2, presto especial atención a la cooperación latinoamericana, caribeña e internacional. Mi enfoque combina rigor institucional, sentido práctico y cultura de resultados.',
     p3: 'De la estrategia a la ejecución, cada misión se construye a medida: análisis, plan de acción, acompañamiento y transmisión.',
     chipsTitle: 'Competencias clave',
     chips: [
@@ -647,19 +647,19 @@ const es: Copy = {
   },
   forum: {
     eyebrow: 'Proyecto insignia',
-    title: 'Foro Caribe, Cooperación y Desarrollo',
+    title: 'Foro América Latina y Caribe, Cooperación y Desarrollo',
     intro:
-      'Un encuentro anual pensado para reunir a instituciones, empresas, mujeres, juventud y culturas del Gran Caribe en torno a una ambición común: construir juntos el Caribe de mañana.',
-    tabs: ['Visión', 'El Foro Gran Caribe', 'Edición piloto: Guadalupe', 'Academia de Liderazgo'],
+      'Un encuentro anual pensado para reunir a instituciones, empresas, mujeres, juventud y culturas de América Latina y el Gran Caribe en torno a una ambición común: construir juntos América Latina y el Caribe de mañana.',
+    tabs: ['Visión', 'El Foro América Latina y Caribe', 'Edición piloto: Guadalupe', 'Academia de Liderazgo'],
     vision: {
-      theme: 'Construir juntos el Caribe de mañana',
+      theme: 'Construir juntos América Latina y el Caribe de mañana',
       durationLocation:
-        '5 días, en sedes rotativas cada año (República Dominicana, Guadalupe, Martinica, Santa Lucía, Barbados, Jamaica...).',
+        '5 días, en sedes rotativas cada año (República Dominicana, Guadalupe, Martinica, Santa Lucía, Barbados, Jamaica, Colombia, Panamá, Costa Rica...).',
       objectivesTitle: 'Los objetivos',
       objectives: [
-        'Fortalecer los intercambios entre los territorios del Caribe',
+        'Fortalecer los intercambios entre los territorios de América Latina y el Caribe',
         'Favorecer las inversiones y las alianzas',
-        'Valorizar las culturas caribeñas',
+        'Valorizar las culturas latinoamericanas y caribeñas',
         'Promover el turismo regional',
         'Apoyar el emprendimiento femenino y juvenil',
         'Dar visibilidad internacional a las iniciativas de cooperación',
@@ -673,7 +673,7 @@ const es: Copy = {
     },
     grandeCaraibe: {
       title: 'Cinco grandes ejes',
-      sub: 'De la cumbre institucional al festival de las culturas, un foro pensado como escaparate completo de la cooperación caribeña.',
+      sub: 'De la cumbre institucional al festival de las culturas, un foro pensado como escaparate completo de la cooperación latinoamericana y caribeña.',
       poles: [
         {
           title: 'Cumbre institucional',
@@ -692,16 +692,16 @@ const es: Copy = {
           items: ['Universidades, escuelas, asociaciones', 'Concursos de oratoria, hackathon', 'Simulaciones diplomáticas'],
         },
         {
-          title: 'Festival de las culturas caribeñas',
+          title: 'Festival de las culturas latinoamericanas y caribeñas',
           items: ['Un pabellón por territorio', 'Gastronomía, artesanía, música, danza', 'Turismo y tradiciones'],
         },
       ],
-      missTitle: 'Miss Caribe Internacional',
+      missTitle: 'Miss América Latina y Caribe',
       missDesc:
         'El certamen se integra al foro: las candidatas se convierten en embajadoras de su territorio, evaluadas por su presentación, su discurso, un proyecto de cooperación y una entrevista con el jurado.',
       prizesTitle: 'Los premios',
       prizes: [
-        'Miss Caribe Internacional',
+        'Miss América Latina y Caribe',
         'Premio Liderazgo',
         'Premio Innovación',
         'Premio Cultura',
@@ -712,7 +712,7 @@ const es: Copy = {
       ],
     },
     guadeloupe: {
-      title: 'Guadalupe, encrucijada del Gran Caribe',
+      title: 'Guadalupe, encrucijada de América Latina y el Caribe',
       sub: 'Una primera edición piloto para consolidar el foro antes de extenderlo progresivamente a los demás territorios.',
       duration: 'Duración: 3 días',
       days: [
@@ -733,7 +733,7 @@ const es: Copy = {
         },
       ],
       missNote:
-        'Una embajadora de la cooperación regional, y no un certamen que compita con Miss Guadalupe: las candidatas son evaluadas por su proyecto, su conocimiento del Caribe y su capacidad de representar el territorio.',
+        'Una embajadora de la cooperación regional, y no un certamen que compita con Miss Guadalupe: las candidatas son evaluadas por su proyecto, su conocimiento de América Latina y el Caribe y su capacidad de representar el territorio.',
       prizesTitle: 'Los premios',
       prizes: [
         'Embajadora de la Cooperación',
@@ -758,10 +758,10 @@ const es: Copy = {
       ],
     },
     academy: {
-      title: 'Academia Caribeña de Liderazgo para Mujeres Electas',
+      title: 'Academia Latinoamericana y Caribeña de Liderazgo para Mujeres Electas',
       subtitle: 'Un programa de formación continua',
       intro:
-        'Pensada para concejalas, alcaldesas, diputadas y senadoras del Caribe, esta academia estructura veinte temas clave de gobernanza y liderazgo político, en la continuidad de la formación de electas que llevo a cabo desde 2017.',
+        'Pensada para concejalas, alcaldesas, diputadas y senadoras de América Latina y el Caribe, esta academia estructura veinte temas clave de gobernanza y liderazgo político, en la continuidad de la formación de electas que llevo a cabo desde 2017.',
       topicsTitle: 'Los veinte temas',
       topics: [
         'Liderazgo político y ético',
@@ -790,7 +790,7 @@ const es: Copy = {
   contact: {
     eyebrow: 'Contacto',
     title: 'Trabajemos juntos',
-    sub: 'Con base en Francia, disponible para misiones en Europa, el Caribe y a nivel internacional. Hablemos de su proyecto.',
+    sub: 'Con base en Francia, disponible para misiones en Europa, América Latina, el Caribe y a nivel internacional. Hablemos de su proyecto.',
     whatsappLabel: 'Escribir por WhatsApp',
     whatsappMessage: 'Hola Lydie, me gustaría hablar sobre un proyecto.',
     emailLabel: 'Enviar un email',
@@ -814,7 +814,7 @@ const en: Copy = {
     expertise: 'Expertise',
     services: 'Services',
     career: 'Career',
-    forum: 'Caribbean Forum',
+    forum: 'Latin America & Caribbean Forum',
     contact: 'Contact',
   },
   hero: {
@@ -851,7 +851,7 @@ const en: Copy = {
     title: 'Diplomacy, made practical',
     quote: 'Every international project is, above all, a meeting of cultures, institutions and people.',
     p1: 'After twenty-nine years serving the Région Guadeloupe, including a term as Deputy Mayor of Trois-Rivières, I have devoted myself since 2011 to training and consulting, at the crossroads of diplomacy, cooperation and project development. Since 2017 I have been training locally elected officials at the IEPP in Paris, while supporting public and private organisations in France and internationally.',
-    p2: 'Educated at the Université des Antilles and the Université Bordeaux 2, I pay particular attention to Caribbean and international cooperation. My approach combines institutional rigour, field experience and a focus on results.',
+    p2: 'Educated at the Université des Antilles and the Université Bordeaux 2, I pay particular attention to Latin American, Caribbean and international cooperation. My approach combines institutional rigour, field experience and a focus on results.',
     p3: 'From strategy to delivery, every assignment is tailor made: analysis, action plan, hands-on support and knowledge transfer.',
     chipsTitle: 'Core skills',
     chips: [
@@ -975,19 +975,19 @@ const en: Copy = {
   },
   forum: {
     eyebrow: 'Flagship initiative',
-    title: 'Caribbean Forum for Cooperation and Development',
+    title: 'Latin America & Caribbean Forum for Cooperation and Development',
     intro:
-      "An annual gathering designed to bring together institutions, businesses, women, youth and cultures from the Greater Caribbean around one shared ambition: building tomorrow's Caribbean together.",
-    tabs: ['Vision', 'The Greater Caribbean Forum', 'Pilot edition: Guadeloupe', 'Leadership Academy'],
+      "An annual gathering designed to bring together institutions, businesses, women, youth and cultures from Latin America and the Greater Caribbean around one shared ambition: building tomorrow's Latin America and Caribbean together.",
+    tabs: ['Vision', 'The Latin America & Caribbean Forum', 'Pilot edition: Guadeloupe', 'Leadership Academy'],
     vision: {
-      theme: "Building tomorrow's Caribbean together",
+      theme: "Building tomorrow's Latin America and Caribbean together",
       durationLocation:
-        '5 days, hosted in rotation each year (Dominican Republic, Guadeloupe, Martinique, Saint Lucia, Barbados, Jamaica...).',
+        '5 days, hosted in rotation each year (Dominican Republic, Guadeloupe, Martinique, Saint Lucia, Barbados, Jamaica, Colombia, Panama, Costa Rica...).',
       objectivesTitle: 'The objectives',
       objectives: [
-        'Strengthen exchange between Caribbean territories',
+        'Strengthen exchange between Latin American and Caribbean territories',
         'Encourage investment and partnerships',
-        'Showcase Caribbean cultures',
+        'Showcase Latin American and Caribbean cultures',
         'Promote regional tourism',
         "Support women's and youth entrepreneurship",
         'Give international visibility to cooperation initiatives',
@@ -1001,7 +1001,7 @@ const en: Copy = {
     },
     grandeCaraibe: {
       title: 'Five flagship tracks',
-      sub: 'From the institutional summit to the culture festival, a forum built as a full showcase of Caribbean cooperation.',
+      sub: 'From the institutional summit to the culture festival, a forum built as a full showcase of Latin American and Caribbean cooperation.',
       poles: [
         {
           title: 'Institutional summit',
@@ -1020,16 +1020,16 @@ const en: Copy = {
           items: ['Universities, schools, associations', 'Public speaking contests, hackathon', 'Diplomatic simulations'],
         },
         {
-          title: 'Caribbean culture festival',
+          title: 'Latin American and Caribbean culture festival',
           items: ['One pavilion per territory', 'Gastronomy, crafts, music, dance', 'Tourism and traditions'],
         },
       ],
-      missTitle: 'Miss Caribbean International',
+      missTitle: 'Miss Latin America and Caribbean',
       missDesc:
         'The pageant is built into the forum: contestants become ambassadors for their territory, judged on their presentation, a speech, a cooperation project and an interview with the jury.',
       prizesTitle: 'The awards',
       prizes: [
-        'Miss Caribbean International',
+        'Miss Latin America and Caribbean',
         'Leadership Award',
         'Innovation Award',
         'Culture Award',
@@ -1040,7 +1040,7 @@ const en: Copy = {
       ],
     },
     guadeloupe: {
-      title: 'Guadeloupe, crossroads of the Greater Caribbean',
+      title: 'Guadeloupe, crossroads of Latin America and the Caribbean',
       sub: 'A pilot first edition to establish the forum before progressively extending it to other territories.',
       duration: 'Duration: 3 days',
       days: [
@@ -1061,7 +1061,7 @@ const en: Copy = {
         },
       ],
       missNote:
-        'An ambassador for regional cooperation, not a competing pageant to Miss Guadeloupe: contestants are judged on their project, their knowledge of the Caribbean and their ability to represent the territory.',
+        'An ambassador for regional cooperation, not a competing pageant to Miss Guadeloupe: contestants are judged on their project, their knowledge of Latin America and the Caribbean and their ability to represent the territory.',
       prizesTitle: 'The awards',
       prizes: [
         'Cooperation Ambassador',
@@ -1086,10 +1086,10 @@ const en: Copy = {
       ],
     },
     academy: {
-      title: 'Caribbean Leadership Academy for Elected Women',
+      title: 'Latin American and Caribbean Leadership Academy for Elected Women',
       subtitle: 'A continuing-education programme',
       intro:
-        'Designed for councilwomen, mayors, members of parliament and senators across the Caribbean, this academy structures twenty key themes in governance and political leadership, building on the training of elected officials I have led since 2017.',
+        'Designed for councilwomen, mayors, members of parliament and senators across Latin America and the Caribbean, this academy structures twenty key themes in governance and political leadership, building on the training of elected officials I have led since 2017.',
       topicsTitle: 'The twenty themes',
       topics: [
         'Political and ethical leadership',
@@ -1118,7 +1118,7 @@ const en: Copy = {
   contact: {
     eyebrow: 'Contact',
     title: 'Let us work together',
-    sub: 'Based in France, available for assignments in Europe, the Caribbean and worldwide. Tell me about your project.',
+    sub: 'Based in France, available for assignments in Europe, Latin America, the Caribbean and worldwide. Tell me about your project.',
     whatsappLabel: 'Message on WhatsApp',
     whatsappMessage: "Hello Lydie, I'd like to talk about a project.",
     emailLabel: 'Send an email',
