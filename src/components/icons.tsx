@@ -34,3 +34,54 @@ export function WhatsAppIcon({ className, size = 18 }: IconProps) {
     </svg>
   )
 }
+
+export function InstagramIcon({ className, size = 18 }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={className}
+    >
+      <rect x="2.5" y="2.5" width="19" height="19" rx="5" />
+      <circle cx="12" cy="12" r="4.5" />
+      <circle cx="17.3" cy="6.7" r="0.6" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
+export function FacebookIcon({ className, size = 18 }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z" />
+    </svg>
+  )
+}
+
+export function TikTokIcon({ className, size = 18 }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M16.6 5.82c-1.2-1.13-1.87-2.7-1.87-4.36h-3.44v14.35a2.6 2.6 0 0 1-4.68 1.56 2.6 2.6 0 0 1 2.36-4.1c.25 0 .49.03.72.1V9.9a6.1 6.1 0 0 0-.72-.04A6.1 6.1 0 1 0 15.1 15.9V9.28a8.2 8.2 0 0 0 4.8 1.54V7.4a4.85 4.85 0 0 1-3.3-1.58z" />
+    </svg>
+  )
+}

@@ -1,7 +1,14 @@
 import { Mail, MapPin } from 'lucide-react'
 import { useLang } from '@/i18n'
-import { CONTACT_EMAIL, LINKEDIN_URL, buildWhatsAppLink } from '@/config'
-import { LinkedInIcon, WhatsAppIcon } from '@/components/icons'
+import {
+  CONTACT_EMAIL,
+  LINKEDIN_URL,
+  INSTAGRAM_URL,
+  FACEBOOK_URL,
+  TIKTOK_URL,
+  buildWhatsAppLink,
+} from '@/config'
+import { LinkedInIcon, WhatsAppIcon, InstagramIcon, FacebookIcon, TikTokIcon } from '@/components/icons'
 
 export function Footer() {
   const { t } = useLang()
@@ -24,7 +31,7 @@ export function Footer() {
           <p className="mt-2 text-[11px] uppercase tracking-[0.24em] text-ink-500">
             {t.footer.role}
           </p>
-          <div className="mt-6 flex items-center gap-3">
+          <div className="mt-6 flex flex-wrap items-center gap-3">
             <a
               href={buildWhatsAppLink(t.contact.whatsappMessage)}
               target="_blank"
@@ -33,6 +40,33 @@ export function Footer() {
               className="flex h-11 w-11 items-center justify-center rounded-full border border-ink-950/15 text-ink-700 transition-colors duration-300 ease-smooth hover:border-gold-500 hover:text-gold-600"
             >
               <WhatsAppIcon size={16} />
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-ink-950/15 text-ink-700 transition-colors duration-300 ease-smooth hover:border-gold-500 hover:text-gold-600"
+            >
+              <InstagramIcon size={16} />
+            </a>
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-ink-950/15 text-ink-700 transition-colors duration-300 ease-smooth hover:border-gold-500 hover:text-gold-600"
+            >
+              <FacebookIcon size={16} />
+            </a>
+            <a
+              href={TIKTOK_URL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="TikTok"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-ink-950/15 text-ink-700 transition-colors duration-300 ease-smooth hover:border-gold-500 hover:text-gold-600"
+            >
+              <TikTokIcon size={16} />
             </a>
             <a
               href={LINKEDIN_URL}
