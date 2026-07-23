@@ -11,6 +11,7 @@ import {
   Presentation,
   Dumbbell,
   Leaf,
+  Network,
 } from 'lucide-react'
 import { useLang } from '@/i18n'
 import { GALLERY_IMAGES } from '@/assets/media'
@@ -29,6 +30,7 @@ const ICONS = [
   Presentation,
   Dumbbell,
   Leaf,
+  Network,
 ]
 
 export function ServicesGrid() {

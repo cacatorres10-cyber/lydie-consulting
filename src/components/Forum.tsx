@@ -6,15 +6,19 @@ import {
   HeartHandshake,
   GraduationCap,
   PartyPopper,
+  Trophy,
   Crown,
   Calendar,
   Wallet,
   Handshake,
+  HandCoins,
+  ChevronDown,
 } from 'lucide-react'
 import { useLang } from '@/i18n'
+import { buildWhatsAppLink } from '@/config'
 import { Reveal } from '@/components/Reveal'
 
-const POLE_ICONS = [Landmark, LineChart, HeartHandshake, GraduationCap, PartyPopper]
+const POLE_ICONS = [Landmark, LineChart, HeartHandshake, GraduationCap, PartyPopper, Trophy]
 
 function Tag({ children, dark = false }: { children: string; dark?: boolean }) {
   return (
@@ -87,7 +91,7 @@ function GrandeCaraibePanel() {
         <p className="mx-auto mt-3 max-w-xl text-sm text-ink-500">{g.sub}</p>
       </div>
 
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-5">
+      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {g.poles.map((pole, i) => {
           const Icon = POLE_ICONS[i]
           return (
@@ -132,6 +136,7 @@ function GrandeCaraibePanel() {
 function AcademyPanel() {
   const { t } = useLang()
   const a = t.forum.academy
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
     <div>
@@ -145,16 +150,50 @@ function AcademyPanel() {
       </div>
 
       <p className="eyebrow mt-10 text-center text-ink-950/45">{a.topicsTitle}</p>
-      <ol className="mx-auto mt-5 grid max-w-4xl gap-x-8 gap-y-3 sm:grid-cols-2">
-        {a.topics.map((topic, i) => (
-          <li key={topic} className="flex items-start gap-3">
-            <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-[11px] font-semibold text-gold-700">
-              {String(i + 1).padStart(2, '0')}
-            </span>
-            <span className="text-sm leading-snug text-ink-950/75">{topic}</span>
-          </li>
-        ))}
-      </ol>
+      <p className="mt-2 text-center text-xs text-ink-400">{a.topicsHint}</p>
+      <div className="mx-auto mt-5 grid max-w-4xl gap-3 sm:grid-cols-2">
+        {a.topics.map((topic, i) => {
+          const isOpen = openIndex === i
+          return (
+            <div
+              key={topic.title}
+              className={`overflow-hidden rounded-2xl border transition-colors duration-300 ease-smooth ${
+                isOpen ? 'border-gold-400/60 bg-gold-50/50' : 'border-ink-950/10 hover:border-gold-400/40'
+              }`}
+            >
+              <button
+                type="button"
+                onClick={() => setOpenIndex(isOpen ? null : i)}
+                aria-expanded={isOpen}
+                className="flex w-full cursor-pointer items-start gap-3 p-4 text-left"
+              >
+                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-[11px] font-semibold text-gold-700">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span className="flex-1 text-sm font-medium leading-snug text-ink-950">{topic.title}</span>
+                <ChevronDown
+                  size={16}
+                  className={`mt-0.5 shrink-0 text-ink-400 transition-transform duration-300 ease-smooth ${
+                    isOpen ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+              <AnimatePresence initial={false}>
+                {isOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    <p className="px-4 pb-4 pl-[52px] text-xs leading-relaxed text-ink-500">{topic.desc}</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }
@@ -289,6 +328,20 @@ export function Forum() {
             </motion.div>
           </AnimatePresence>
         </div>
+
+        <Reveal delay={0.15}>
+          <div className="mt-16 text-center">
+            <a
+              href={buildWhatsAppLink(t.forum.donateMessage)}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2.5 rounded-full bg-amber-500 px-8 py-4 text-sm font-bold tracking-wide text-ink-950 shadow-lg shadow-amber-500/50 transition-all duration-300 ease-smooth hover:scale-105 hover:bg-amber-400"
+            >
+              <HandCoins size={18} />
+              {t.forum.donateLabel}
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

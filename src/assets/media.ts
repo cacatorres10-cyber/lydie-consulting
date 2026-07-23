@@ -21,6 +21,7 @@ export const IMG = {
   training: u('photo-1524178232363-1fb2b075b655'),
   sports: u('photo-1571019613454-1cb2f99b2d8b'),
   naturo: u('photo-1515377905703-c4788e51af15'),
+  networking: u('photo-1724866976376-4b217d29a462'),
 }
 
 export const GALLERY_IMAGES = [
@@ -36,4 +37,5 @@ export const GALLERY_IMAGES = [
   IMG.training,
   IMG.sports,
   IMG.naturo,
+  IMG.networking,
 ]

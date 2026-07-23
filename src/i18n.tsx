@@ -28,6 +28,11 @@ export interface ForumDay {
   items: string[]
 }
 
+export interface ForumTopic {
+  title: string
+  desc: string
+}
+
 export interface Copy {
   meta: { title: string; description: string }
   nav: {
@@ -96,6 +101,8 @@ export interface Copy {
     title: string
     intro: string
     tabs: string[]
+    donateLabel: string
+    donateMessage: string
     vision: {
       theme: string
       durationLocation: string
@@ -131,7 +138,8 @@ export interface Copy {
       subtitle: string
       intro: string
       topicsTitle: string
-      topics: string[]
+      topicsHint: string
+      topics: ForumTopic[]
     }
   }
   contact: {
@@ -195,7 +203,7 @@ const fr: Copy = {
     title: 'Une diplomatie du concret',
     quote: "Chaque projet international est d'abord une rencontre entre des cultures, des institutions et des personnes.",
     p1: "Après vingt-neuf ans au service de la Région Guadeloupe, dont un mandat d'adjointe au maire de Trois-Rivières, je me consacre depuis 2011 à la formation et au conseil, à la croisée de la diplomatie, de la coopération et du développement de projets. Depuis 2017, je forme les élues locales au sein de l'IEPP à Paris et j'accompagne des organisations publiques et privées, en France comme à l'international.",
-    p2: "Formée à l'Université des Antilles et à l'Université Bordeaux 2, certifiée formatrice de formateurs (2011) et formée à l'ICOPER en diplomatie, relations extérieures et communication politique (2026), je porte une attention particulière à la coopération latino-américaine, caribéenne et internationale. Mon approche associe rigueur institutionnelle, sens du terrain et culture du résultat.",
+    p2: "Formée à l'Université des Antilles et à l'Université Bordeaux 2, certifiée formatrice de formateurs (2011) et formée à l'ICOPER en diplomatie, relations extérieures, communication politique, gestion de crise et porte-parolat institutionnel (2026), je porte une attention particulière à la coopération latino-américaine, caribéenne et internationale. Mon approche associe rigueur institutionnelle, sens du terrain et culture du résultat.",
     p3: "De la stratégie à la mise en œuvre, chaque mission est construite sur mesure: analyse, plan d'action, accompagnement et transmission.",
     chipsTitle: 'Compétences clés',
     chips: [
@@ -247,6 +255,7 @@ const fr: Copy = {
       { name: 'Formation en entreprise', category: 'Formation', tagline: 'Formation de formateurs et ingénierie pédagogique.' },
       { name: 'Centre sportif', category: 'Bien-être', tagline: 'Programmes sportifs et encadrement.' },
       { name: 'Naturopathie', category: 'Bien-être', tagline: 'Approche naturelle de la santé et du bien-être.' },
+      { name: 'Réseau de mise en relation', category: 'Mise en réseau', tagline: 'Mise en relation de prestataires et recrutement de profils qualifiés.' },
     ],
   },
   career: {
@@ -299,7 +308,7 @@ const fr: Copy = {
       {
         period: '1986 · 2015',
         role: 'Responsable de service, cadre territoriale',
-        org: 'Région Guadeloupe',
+        org: 'Conseil Régional de la Guadeloupe',
         place: 'Basse-Terre, Guadeloupe',
         desc: 'Documentation, protocole, cabinets et presse des présidents de Région, affaires scolaires et formation professionnelle.',
       },
@@ -318,7 +327,7 @@ const fr: Copy = {
     schools: [
       { school: 'Université des Antilles', note: 'Formation universitaire' },
       { school: 'Université Bordeaux 2', note: 'Formation universitaire' },
-      { school: 'ICOPER', note: 'Diplomatie, relations extérieures et communication politique (2026)' },
+      { school: 'ICOPER', note: 'Diplomatie, relations extérieures, communication politique, gestion de crise et porte-parolat institutionnel (2026)' },
       { school: 'Formation de formateurs', note: 'Certification (2011)' },
     ],
     extra: 'Complétée par des formations continues tout au long du parcours.',
@@ -332,6 +341,8 @@ const fr: Copy = {
     intro:
       "Un rendez-vous annuel imaginé pour réunir institutions, entreprises, femmes, jeunesse et cultures d'Amérique latine et de la Grande Caraïbe autour d'une ambition commune: construire ensemble l'Amérique latine et la Caraïbe de demain.",
     tabs: ['Vision', 'Le Forum Amérique Latine & Caraïbe', 'Édition pilote : Guadeloupe', 'Académie Leadership'],
+    donateLabel: 'Soutenir le projet',
+    donateMessage: 'Bonjour Lydie, je souhaite soutenir le Forum Amérique Latine & Caraïbe (don ou partenariat).',
     vision: {
       theme: "Construire ensemble l'Amérique latine et la Caraïbe de demain",
       durationLocation:
@@ -375,6 +386,10 @@ const fr: Copy = {
         {
           title: 'Festival des cultures latino-américaines et caribéennes',
           items: ['Un pavillon par territoire', 'Gastronomie, artisanat, musique, danse', 'Tourisme et traditions'],
+        },
+        {
+          title: 'Forum du sport',
+          items: ['Compétitions et échanges sportifs régionaux', 'Jeunes talents et sport de haut niveau', 'Tourisme sportif et infrastructures'],
         },
       ],
       missTitle: 'Miss Amérique Latine et Caraïbes',
@@ -428,7 +443,7 @@ const fr: Copy = {
       budgetValue: '80 000 € – 150 000 €',
       partnersTitle: 'Partenaires envisagés',
       partners: [
-        'Région Guadeloupe',
+        'Conseil Régional de la Guadeloupe',
         'Département',
         "Communautés d'agglomération",
         'Communes',
@@ -444,34 +459,35 @@ const fr: Copy = {
       intro:
         "Pensée pour les conseillères, maires, députées et sénatrices d'Amérique latine et de la Caraïbe, cette académie structure vingt thématiques clés de la gouvernance et du leadership politique, dans la continuité des formations d'élues menées depuis 2017.",
       topicsTitle: 'Les vingt thématiques',
+      topicsHint: 'Cliquez sur une thématique pour en savoir plus.',
       topics: [
-        'Leadership politique et éthique',
-        'Gouvernance et administration publique',
-        'Communication politique et gestion des médias',
-        'Art oratoire et débat public',
-        'Élaboration et évaluation des politiques publiques',
-        'Gestion de projets et développement territorial',
-        'Budget public et finances locales',
-        'Transparence, redevabilité et lutte contre la corruption',
-        'Diplomatie territoriale et coopération internationale',
-        'Négociation, médiation et résolution de conflits',
-        'Égalité des genres et leadership inclusif',
-        'Participation citoyenne et renforcement démocratique',
-        "Gestion de crise et communication d'urgence",
-        'Transformation numérique et gouvernement électronique',
-        'Relations institutionnelles et protocole',
-        'Développement durable et Agenda 2030 (ODD)',
-        'Gestion de campagnes et stratégie électorale',
-        "Plaidoyer politique et construction d'alliances",
-        'Droits humains et cadre juridique de la fonction publique',
-        'Développement économique local et entrepreneuriat',
+        { title: 'Leadership politique et éthique', desc: 'Exercer l’autorité avec intégrité, exemplarité et sens du bien commun.' },
+        { title: 'Gouvernance et administration publique', desc: 'Piloter les services publics avec efficacité, transparence et redevabilité.' },
+        { title: 'Communication politique et gestion des médias', desc: 'Construire un discours clair et maîtriser sa présence dans les médias.' },
+        { title: 'Art oratoire et débat public', desc: "S'exprimer avec aisance et convaincre lors des débats publics." },
+        { title: 'Élaboration et évaluation des politiques publiques', desc: 'Concevoir des politiques efficaces et en mesurer les résultats.' },
+        { title: 'Gestion de projets et développement territorial', desc: 'Piloter des projets structurants au service du territoire.' },
+        { title: 'Budget public et finances locales', desc: "Maîtriser l'élaboration et le suivi d'un budget public." },
+        { title: 'Transparence, redevabilité et lutte contre la corruption', desc: "Garantir l'intégrité et la confiance dans l'action publique." },
+        { title: 'Diplomatie territoriale et coopération internationale', desc: 'Nouer des partenariats entre territoires à l’échelle internationale.' },
+        { title: 'Négociation, médiation et résolution de conflits', desc: 'Désamorcer les tensions et construire des accords durables.' },
+        { title: 'Égalité des genres et leadership inclusif', desc: 'Favoriser une gouvernance qui inclut toutes les voix.' },
+        { title: 'Participation citoyenne et renforcement démocratique', desc: 'Associer les citoyens aux décisions qui les concernent.' },
+        { title: "Gestion de crise et communication d'urgence", desc: "Réagir avec méthode et communiquer clairement en situation de crise." },
+        { title: 'Transformation numérique et gouvernement électronique', desc: 'Moderniser les services publics grâce au numérique.' },
+        { title: 'Relations institutionnelles et protocole', desc: 'Maîtriser les usages et les codes des relations officielles.' },
+        { title: 'Développement durable et Agenda 2030 (ODD)', desc: "Intégrer les objectifs de développement durable à l'action publique." },
+        { title: 'Gestion de campagnes et stratégie électorale', desc: 'Structurer une campagne électorale efficace et cohérente.' },
+        { title: "Plaidoyer politique et construction d'alliances", desc: "Défendre une cause et fédérer des soutiens autour d'elle." },
+        { title: 'Droits humains et cadre juridique de la fonction publique', desc: "Connaître le cadre légal et les droits attachés à la fonction élective." },
+        { title: 'Développement économique local et entrepreneuriat', desc: "Soutenir l'activité économique et l'entrepreneuriat sur le territoire." },
       ],
     },
   },
   contact: {
     eyebrow: 'Contact',
     title: 'Travaillons ensemble',
-    sub: "Basée en France, disponible pour des missions en Europe, en Amérique latine, dans la Caraïbe et à l'international. Parlons de votre projet.",
+    sub: "Disponible à l'international, et tout particulièrement dans les Caraïbes et en Amérique latine, ainsi qu'en Europe. Parlons de votre projet.",
     whatsappLabel: 'Écrire sur WhatsApp',
     whatsappMessage: 'Bonjour Lydie, je souhaite échanger sur un projet.',
     emailLabel: 'Envoyer un email',
@@ -532,7 +548,7 @@ const es: Copy = {
     title: 'Una diplomacia de lo concreto',
     quote: 'Cada proyecto internacional es, ante todo, un encuentro entre culturas, instituciones y personas.',
     p1: 'Después de veintinueve años al servicio de la Región Guadalupe, incluido un mandato como teniente de alcalde de Trois-Rivières, me dedico desde 2011 a la formación y la consultoría, en el cruce de la diplomacia, la cooperación y el desarrollo de proyectos. Desde 2017 formo a electas locales en el IEPP de París y acompaño a organizaciones públicas y privadas, en Francia y a nivel internacional.',
-    p2: 'Formada en la Université des Antilles y en la Université Bordeaux 2, certificada como formadora de formadores (2011) y formada en el ICOPER en diplomacia, relaciones exteriores y comunicación política (2026), presto especial atención a la cooperación latinoamericana, caribeña e internacional. Mi enfoque combina rigor institucional, sentido práctico y cultura de resultados.',
+    p2: 'Formada en la Université des Antilles y en la Université Bordeaux 2, certificada como formadora de formadores (2011) y formada en el ICOPER en diplomacia, relaciones exteriores, comunicación política, gestión de crisis y vocería institucional (2026), presto especial atención a la cooperación latinoamericana, caribeña e internacional. Mi enfoque combina rigor institucional, sentido práctico y cultura de resultados.',
     p3: 'De la estrategia a la ejecución, cada misión se construye a medida: análisis, plan de acción, acompañamiento y transmisión.',
     chipsTitle: 'Competencias clave',
     chips: [
@@ -584,6 +600,7 @@ const es: Copy = {
       { name: 'Formación empresarial', category: 'Formación', tagline: 'Formación de formadores e ingeniería pedagógica.' },
       { name: 'Centro deportivo', category: 'Bienestar', tagline: 'Programas deportivos y acompañamiento.' },
       { name: 'Naturopatía', category: 'Bienestar', tagline: 'Enfoque natural de la salud y del bienestar.' },
+      { name: 'Red de contactos y servicios', category: 'Networking', tagline: 'Conexión de proveedores y servicios, y reclutamiento de perfiles calificados.' },
     ],
   },
   career: {
@@ -636,7 +653,7 @@ const es: Copy = {
       {
         period: '1986 · 2015',
         role: 'Responsable de servicio, cargo territorial',
-        org: 'Región Guadalupe',
+        org: 'Conseil Régional de la Guadeloupe',
         place: 'Basse-Terre, Guadalupe',
         desc: 'Documentación, protocolo, gabinetes y prensa de los presidentes de la Región, asuntos escolares y formación profesional.',
       },
@@ -655,7 +672,7 @@ const es: Copy = {
     schools: [
       { school: 'Université des Antilles', note: 'Formación universitaria' },
       { school: 'Université Bordeaux 2', note: 'Formación universitaria' },
-      { school: 'ICOPER', note: 'Diplomacia, relaciones exteriores y comunicación política (2026)' },
+      { school: 'ICOPER', note: 'Diplomacia, relaciones exteriores, comunicación política, gestión de crisis y vocería institucional (2026)' },
       { school: 'Formación de formadores', note: 'Certificación (2011)' },
     ],
     extra: 'Completada con formación continua a lo largo de toda la trayectoria.',
@@ -669,6 +686,8 @@ const es: Copy = {
     intro:
       'Un encuentro anual pensado para reunir a instituciones, empresas, mujeres, juventud y culturas de América Latina y el Gran Caribe en torno a una ambición común: construir juntos América Latina y el Caribe de mañana.',
     tabs: ['Visión', 'El Foro América Latina y Caribe', 'Edición piloto: Guadalupe', 'Academia de Liderazgo'],
+    donateLabel: 'Apoyar el proyecto',
+    donateMessage: 'Hola Lydie, deseo apoyar el Foro América Latina y Caribe (donación o alianza).',
     vision: {
       theme: 'Construir juntos América Latina y el Caribe de mañana',
       durationLocation:
@@ -712,6 +731,10 @@ const es: Copy = {
         {
           title: 'Festival de las culturas latinoamericanas y caribeñas',
           items: ['Un pabellón por territorio', 'Gastronomía, artesanía, música, danza', 'Turismo y tradiciones'],
+        },
+        {
+          title: 'Foro del deporte',
+          items: ['Competencias e intercambios deportivos regionales', 'Jóvenes talentos y deporte de alto nivel', 'Turismo deportivo e infraestructuras'],
         },
       ],
       missTitle: 'Miss América Latina y Caribe',
@@ -765,7 +788,7 @@ const es: Copy = {
       budgetValue: '80 000 € – 150 000 €',
       partnersTitle: 'Socios previstos',
       partners: [
-        'Región Guadalupe',
+        'Conseil Régional de la Guadeloupe',
         'Departamento',
         'Mancomunidades',
         'Municipios',
@@ -781,34 +804,35 @@ const es: Copy = {
       intro:
         'Pensada para concejalas, alcaldesas, diputadas y senadoras de América Latina y el Caribe, esta academia estructura veinte temas clave de gobernanza y liderazgo político, en la continuidad de la formación de electas que llevo a cabo desde 2017.',
       topicsTitle: 'Los veinte temas',
+      topicsHint: 'Haga clic en un tema para saber más.',
       topics: [
-        'Liderazgo político y ético',
-        'Gobernanza y administración pública',
-        'Comunicación política y manejo de medios',
-        'Oratoria y debate público',
-        'Elaboración y evaluación de políticas públicas',
-        'Gestión de proyectos y desarrollo territorial',
-        'Presupuesto público y finanzas locales',
-        'Transparencia, rendición de cuentas y lucha contra la corrupción',
-        'Diplomacia territorial y cooperación internacional',
-        'Negociación, mediación y resolución de conflictos',
-        'Igualdad de género y liderazgo inclusivo',
-        'Participación ciudadana y fortalecimiento democrático',
-        'Gestión de crisis y comunicación de emergencia',
-        'Transformación digital y gobierno electrónico',
-        'Relaciones institucionales y protocolo',
-        'Desarrollo sostenible y Agenda 2030 (ODS)',
-        'Gestión de campañas y estrategia electoral',
-        'Incidencia política y construcción de alianzas',
-        'Derechos humanos y marco jurídico de la función pública',
-        'Desarrollo económico local y emprendimiento',
+        { title: 'Liderazgo político y ético', desc: 'Ejercer la autoridad con integridad, ejemplaridad y sentido del bien común.' },
+        { title: 'Gobernanza y administración pública', desc: 'Dirigir los servicios públicos con eficacia, transparencia y rendición de cuentas.' },
+        { title: 'Comunicación política y manejo de medios', desc: 'Construir un discurso claro y dominar la presencia en medios.' },
+        { title: 'Oratoria y debate público', desc: 'Expresarse con soltura y convencer en los debates públicos.' },
+        { title: 'Elaboración y evaluación de políticas públicas', desc: 'Diseñar políticas eficaces y medir sus resultados.' },
+        { title: 'Gestión de proyectos y desarrollo territorial', desc: 'Dirigir proyectos estructurantes al servicio del territorio.' },
+        { title: 'Presupuesto público y finanzas locales', desc: 'Dominar la elaboración y el seguimiento de un presupuesto público.' },
+        { title: 'Transparencia, rendición de cuentas y lucha contra la corrupción', desc: 'Garantizar la integridad y la confianza en la acción pública.' },
+        { title: 'Diplomacia territorial y cooperación internacional', desc: 'Tejer alianzas entre territorios a escala internacional.' },
+        { title: 'Negociación, mediación y resolución de conflictos', desc: 'Desactivar tensiones y construir acuerdos duraderos.' },
+        { title: 'Igualdad de género y liderazgo inclusivo', desc: 'Favorecer una gobernanza que incluya todas las voces.' },
+        { title: 'Participación ciudadana y fortalecimiento democrático', desc: 'Involucrar a la ciudadanía en las decisiones que le afectan.' },
+        { title: 'Gestión de crisis y comunicación de emergencia', desc: 'Reaccionar con método y comunicar con claridad en momentos de crisis.' },
+        { title: 'Transformación digital y gobierno electrónico', desc: 'Modernizar los servicios públicos mediante lo digital.' },
+        { title: 'Relaciones institucionales y protocolo', desc: 'Dominar los usos y códigos de las relaciones oficiales.' },
+        { title: 'Desarrollo sostenible y Agenda 2030 (ODS)', desc: 'Integrar los objetivos de desarrollo sostenible en la acción pública.' },
+        { title: 'Gestión de campañas y estrategia electoral', desc: 'Estructurar una campaña electoral eficaz y coherente.' },
+        { title: 'Incidencia política y construcción de alianzas', desc: 'Defender una causa y sumar apoyos en torno a ella.' },
+        { title: 'Derechos humanos y marco jurídico de la función pública', desc: 'Conocer el marco legal y los derechos de la función electa.' },
+        { title: 'Desarrollo económico local y emprendimiento', desc: 'Impulsar la actividad económica y el emprendimiento en el territorio.' },
       ],
     },
   },
   contact: {
     eyebrow: 'Contacto',
     title: 'Trabajemos juntos',
-    sub: 'Con base en Francia, disponible para misiones en Europa, América Latina, el Caribe y a nivel internacional. Hablemos de su proyecto.',
+    sub: 'Disponible a nivel internacional, y muy especialmente en el Caribe y América Latina, además de Europa. Hablemos de su proyecto.',
     whatsappLabel: 'Escribir por WhatsApp',
     whatsappMessage: 'Hola Lydie, me gustaría hablar sobre un proyecto.',
     emailLabel: 'Enviar un email',
@@ -869,7 +893,7 @@ const en: Copy = {
     title: 'Diplomacy, made practical',
     quote: 'Every international project is, above all, a meeting of cultures, institutions and people.',
     p1: 'After twenty-nine years serving the Région Guadeloupe, including a term as Deputy Mayor of Trois-Rivières, I have devoted myself since 2011 to training and consulting, at the crossroads of diplomacy, cooperation and project development. Since 2017 I have been training locally elected officials at the IEPP in Paris, while supporting public and private organisations in France and internationally.',
-    p2: 'Educated at the Université des Antilles and the Université Bordeaux 2, certified as a trainer of trainers (2011) and trained at ICOPER in diplomacy, foreign affairs and political communication (2026), I pay particular attention to Latin American, Caribbean and international cooperation. My approach combines institutional rigour, field experience and a focus on results.',
+    p2: 'Educated at the Université des Antilles and the Université Bordeaux 2, certified as a trainer of trainers (2011) and trained at ICOPER in diplomacy, foreign affairs, political communication, crisis management and institutional spokesmanship (2026), I pay particular attention to Latin American, Caribbean and international cooperation. My approach combines institutional rigour, field experience and a focus on results.',
     p3: 'From strategy to delivery, every assignment is tailor made: analysis, action plan, hands-on support and knowledge transfer.',
     chipsTitle: 'Core skills',
     chips: [
@@ -921,6 +945,7 @@ const en: Copy = {
       { name: 'Corporate training', category: 'Training', tagline: 'Train-the-trainer programmes and instructional design.' },
       { name: 'Sports centre', category: 'Wellbeing', tagline: 'Sports programmes and coaching.' },
       { name: 'Naturopathy', category: 'Wellbeing', tagline: 'A natural approach to health and wellbeing.' },
+      { name: 'Networking & Referral Services', category: 'Networking', tagline: 'Connecting service providers and recruiting qualified talent.' },
     ],
   },
   career: {
@@ -973,7 +998,7 @@ const en: Copy = {
       {
         period: '1986 · 2015',
         role: 'Department head, territorial civil servant',
-        org: 'Région Guadeloupe',
+        org: 'Conseil Régional de la Guadeloupe',
         place: 'Basse-Terre, Guadeloupe',
         desc: 'Documentation, protocol, offices and press service of the regional presidents, school affairs and vocational training.',
       },
@@ -992,7 +1017,7 @@ const en: Copy = {
     schools: [
       { school: 'Université des Antilles', note: 'University education' },
       { school: 'Université Bordeaux 2', note: 'University education' },
-      { school: 'ICOPER', note: 'Diplomacy, foreign affairs and political communication (2026)' },
+      { school: 'ICOPER', note: 'Diplomacy, foreign affairs, political communication, crisis management and institutional spokesmanship (2026)' },
       { school: 'Trainer of trainers', note: 'Certification (2011)' },
     ],
     extra: 'Complemented by continuing education throughout my career.',
@@ -1006,6 +1031,8 @@ const en: Copy = {
     intro:
       "An annual gathering designed to bring together institutions, businesses, women, youth and cultures from Latin America and the Greater Caribbean around one shared ambition: building tomorrow's Latin America and Caribbean together.",
     tabs: ['Vision', 'The Latin America & Caribbean Forum', 'Pilot edition: Guadeloupe', 'Leadership Academy'],
+    donateLabel: 'Support the project',
+    donateMessage: 'Hello Lydie, I would like to support the Latin America & Caribbean Forum (donation or partnership).',
     vision: {
       theme: "Building tomorrow's Latin America and Caribbean together",
       durationLocation:
@@ -1049,6 +1076,10 @@ const en: Copy = {
         {
           title: 'Latin American and Caribbean culture festival',
           items: ['One pavilion per territory', 'Gastronomy, crafts, music, dance', 'Tourism and traditions'],
+        },
+        {
+          title: 'Sports forum',
+          items: ['Regional sports competitions and exchange', 'Young talent and high-performance sport', 'Sports tourism and infrastructure'],
         },
       ],
       missTitle: 'Miss Latin America and Caribbean',
@@ -1102,7 +1133,7 @@ const en: Copy = {
       budgetValue: '€80,000 – €150,000',
       partnersTitle: 'Potential partners',
       partners: [
-        'Guadeloupe Region',
+        'Conseil Régional de la Guadeloupe',
         'Département',
         'Intermunicipal communities',
         'Municipalities',
@@ -1118,34 +1149,35 @@ const en: Copy = {
       intro:
         'Designed for councilwomen, mayors, members of parliament and senators across Latin America and the Caribbean, this academy structures twenty key themes in governance and political leadership, building on the training of elected officials I have led since 2017.',
       topicsTitle: 'The twenty themes',
+      topicsHint: 'Click on a theme to learn more.',
       topics: [
-        'Political and ethical leadership',
-        'Governance and public administration',
-        'Political communication and media relations',
-        'Public speaking and debate',
-        'Public policy design and evaluation',
-        'Project management and territorial development',
-        'Public budgeting and local finance',
-        'Transparency, accountability and anti-corruption',
-        'Territorial diplomacy and international cooperation',
-        'Negotiation, mediation and conflict resolution',
-        'Gender equality and inclusive leadership',
-        'Citizen participation and democratic strengthening',
-        'Crisis management and emergency communication',
-        'Digital transformation and e-government',
-        'Institutional relations and protocol',
-        'Sustainable development and the 2030 Agenda (SDGs)',
-        'Campaign management and electoral strategy',
-        'Political advocacy and coalition building',
-        'Human rights and the legal framework of public office',
-        'Local economic development and entrepreneurship',
+        { title: 'Political and ethical leadership', desc: 'Exercising authority with integrity and a sense of the common good.' },
+        { title: 'Governance and public administration', desc: 'Running public services efficiently, transparently and accountably.' },
+        { title: 'Political communication and media relations', desc: 'Building a clear message and mastering media presence.' },
+        { title: 'Public speaking and debate', desc: 'Speaking with confidence and persuading in public debate.' },
+        { title: 'Public policy design and evaluation', desc: 'Designing effective policies and measuring their results.' },
+        { title: 'Project management and territorial development', desc: 'Leading structuring projects that serve the territory.' },
+        { title: 'Public budgeting and local finance', desc: 'Mastering the design and follow-up of a public budget.' },
+        { title: 'Transparency, accountability and anti-corruption', desc: 'Safeguarding integrity and trust in public action.' },
+        { title: 'Territorial diplomacy and international cooperation', desc: 'Building partnerships between territories on an international scale.' },
+        { title: 'Negotiation, mediation and conflict resolution', desc: 'Defusing tension and building lasting agreements.' },
+        { title: 'Gender equality and inclusive leadership', desc: 'Fostering governance that includes every voice.' },
+        { title: 'Citizen participation and democratic strengthening', desc: 'Involving citizens in the decisions that affect them.' },
+        { title: 'Crisis management and emergency communication', desc: 'Responding methodically and communicating clearly in a crisis.' },
+        { title: 'Digital transformation and e-government', desc: 'Modernising public services through digital tools.' },
+        { title: 'Institutional relations and protocol', desc: 'Mastering the customs and codes of official relations.' },
+        { title: 'Sustainable development and the 2030 Agenda (SDGs)', desc: 'Weaving sustainable development goals into public action.' },
+        { title: 'Campaign management and electoral strategy', desc: 'Structuring an effective, coherent election campaign.' },
+        { title: 'Political advocacy and coalition building', desc: 'Championing a cause and rallying support around it.' },
+        { title: 'Human rights and the legal framework of public office', desc: 'Understanding the legal framework and rights of elected office.' },
+        { title: 'Local economic development and entrepreneurship', desc: 'Supporting local economic activity and entrepreneurship.' },
       ],
     },
   },
   contact: {
     eyebrow: 'Contact',
     title: 'Let us work together',
-    sub: 'Based in France, available for assignments in Europe, Latin America, the Caribbean and worldwide. Tell me about your project.',
+    sub: 'Available internationally, with a special focus on the Caribbean and Latin America, as well as Europe. Tell me about your project.',
     whatsappLabel: 'Message on WhatsApp',
     whatsappMessage: "Hello Lydie, I'd like to talk about a project.",
     emailLabel: 'Send an email',
