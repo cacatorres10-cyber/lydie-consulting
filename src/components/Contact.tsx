@@ -18,6 +18,11 @@ export function Contact() {
             </h2>
             <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-ink-600">{t.contact.sub}</p>
 
+            <div className="mt-6 rounded-2xl border border-gold-200 bg-gold-50/70 p-4 text-sm text-ink-700">
+              <p className="font-semibold text-ink-900">Demandez un service précis</p>
+              <p className="mt-2">Vous pouvez écrire directement pour réserver un voyage, demander une formation, un accompagnement patrimonial, un service de connexion ou un événement.</p>
+            </div>
+
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <a
                 href={buildWhatsAppLink(t.contact.whatsappMessage)}

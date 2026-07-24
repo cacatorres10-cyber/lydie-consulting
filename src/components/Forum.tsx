@@ -330,7 +330,7 @@ export function Forum() {
         </div>
 
         <Reveal delay={0.15}>
-          <div className="mt-16 text-center">
+          <div className="mt-16 flex flex-col items-center justify-center gap-4 text-center">
             <a
               href={buildWhatsAppLink(t.forum.donateMessage)}
               target="_blank"
@@ -340,6 +340,10 @@ export function Forum() {
               <HandCoins size={18} />
               {t.forum.donateLabel}
             </a>
+            <div className="rounded-2xl border border-ink-950/10 bg-white/70 px-6 py-4 text-sm text-ink-700">
+              <p className="font-semibold text-ink-900">Livres en PDF</p>
+              <p className="mt-1">Une entrée dédiée pour l’achat et le téléchargement des livres en format PDF sera ajoutée ici.</p>
+            </div>
           </div>
         </Reveal>
       </div>

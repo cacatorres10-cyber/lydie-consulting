@@ -12,6 +12,7 @@ import {
   Dumbbell,
   Leaf,
   Network,
+  BookOpen,
 } from 'lucide-react'
 import { useLang } from '@/i18n'
 import { GALLERY_IMAGES } from '@/assets/media'
@@ -31,6 +32,7 @@ const ICONS = [
   Dumbbell,
   Leaf,
   Network,
+  BookOpen,
 ]
 
 export function ServicesGrid() {
@@ -72,6 +74,12 @@ export function ServicesGrid() {
                     </div>
                     <h3 className="mt-4 text-lg font-bold leading-snug text-ink-950">{item.name}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-ink-500">{item.tagline}</p>
+                    <a
+                      href="#contact"
+                      className="mt-4 inline-flex text-sm font-semibold text-gold-700 transition-colors hover:text-gold-600"
+                    >
+                      Demander ce service →
+                    </a>
                   </div>
                 </div>
               </Reveal>
