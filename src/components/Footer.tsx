@@ -87,7 +87,7 @@ export function Footer() {
           </div>
         </div>
 
-        <nav className="md:col-span-3" aria-label="Pied de page">
+        <nav className="md:col-span-3" aria-label={t.a11y.footerNav}>
           <ul className="space-y-3">
             {links.map((l) => (
               <li key={l.href}>

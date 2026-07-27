@@ -33,12 +33,14 @@ interface ThreeDPhotoCarouselProps {
   items: CarouselItem[]
   prevLabel?: string
   nextLabel?: string
+  onItemClick?: (index: number) => void
 }
 
 export function ThreeDPhotoCarousel({
   items,
   prevLabel = 'Previous',
   nextLabel = 'Next',
+  onItemClick,
 }: ThreeDPhotoCarouselProps) {
   const faceWidth = useFaceWidth()
   const faceCount = items.length
@@ -88,15 +90,18 @@ export function ThreeDPhotoCarousel({
         animate={controls}
       >
         {items.map((item, i) => (
-          <div
+          <motion.div
             key={`${item.title}-${i}`}
-            className="absolute flex h-full origin-center items-center justify-center p-1.5 sm:p-2"
+            className={`absolute flex h-full origin-center items-center justify-center p-1.5 sm:p-2 ${
+              onItemClick ? 'cursor-pointer' : ''
+            }`}
             style={{
               width: `${faceWidth}px`,
               transform: `rotateY(${i * anglePerItem}deg) translateZ(${radius}px)`,
               backfaceVisibility: 'hidden',
               WebkitBackfaceVisibility: 'hidden',
             }}
+            onTap={() => onItemClick?.(i)}
           >
             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl border border-ink-950/10 bg-ink-900/10 shadow-2xl">
               <img
@@ -122,7 +127,7 @@ export function ThreeDPhotoCarousel({
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </motion.div>
 

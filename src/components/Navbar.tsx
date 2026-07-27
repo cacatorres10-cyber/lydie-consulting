@@ -41,7 +41,7 @@ export function Navbar() {
 
         <nav
           className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 lg:flex"
-          aria-label="Navigation principale"
+          aria-label={t.a11y.mainNav}
         >
           {links.map((l) => (
             <a
@@ -55,7 +55,7 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-1" role="group" aria-label="Langue">
+          <div className="flex items-center gap-1" role="group" aria-label={t.a11y.language}>
             {LANGS.map((l) => (
               <button
                 key={l}
@@ -78,7 +78,7 @@ export function Navbar() {
           <button
             onClick={() => setOpen(true)}
             className="cursor-pointer p-2 text-ink-950 lg:hidden"
-            aria-label="Ouvrir le menu"
+            aria-label={t.a11y.openMenu}
           >
             <Menu size={22} />
           </button>
@@ -94,12 +94,12 @@ export function Navbar() {
             <button
               onClick={() => setOpen(false)}
               className="cursor-pointer p-2 text-ink-950"
-              aria-label="Fermer le menu"
+              aria-label={t.a11y.closeMenu}
             >
               <X size={24} />
             </button>
           </div>
-          <nav className="mt-14 flex flex-col gap-7" aria-label="Navigation mobile">
+          <nav className="mt-14 flex flex-col gap-7" aria-label={t.a11y.mobileNav}>
             {links.map((l, i) => (
               <a
                 key={l.href}

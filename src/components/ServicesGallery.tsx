@@ -1,6 +1,7 @@
 import { ThreeDPhotoCarousel } from '@/components/ui/3d-carousel'
 import { useLang } from '@/i18n'
 import { GALLERY_IMAGES } from '@/assets/media'
+import { buildWhatsAppLink } from '@/config'
 
 export function ServicesGallery() {
   const { t } = useLang()
@@ -11,6 +12,12 @@ export function ServicesGallery() {
     title: s.name,
     tagline: s.tagline,
   }))
+
+  const handleItemClick = (index: number) => {
+    const serviceName = t.services.items[index].name
+    const href = buildWhatsAppLink(t.services.inquiryMessage.replace('{service}', serviceName))
+    window.open(href, '_blank', 'noreferrer')
+  }
 
   return (
     <section id="showcase" className="bg-dots relative border-y border-ink-950/10 bg-paper py-16 md:py-24">
@@ -28,6 +35,7 @@ export function ServicesGallery() {
           items={items}
           prevLabel={t.services.prevLabel}
           nextLabel={t.services.nextLabel}
+          onItemClick={handleItemClick}
         />
       </div>
     </section>

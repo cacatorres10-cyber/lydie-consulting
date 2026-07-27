@@ -79,6 +79,8 @@ export interface Copy {
     sub: string
     prevLabel: string
     nextLabel: string
+    inquiryMessage: string
+    inquiryLabel: string
     items: ServiceItem[]
   }
   career: {
@@ -153,6 +155,14 @@ export interface Copy {
     location: string
   }
   footer: { role: string; rights: string }
+  a11y: {
+    mainNav: string
+    language: string
+    openMenu: string
+    closeMenu: string
+    mobileNav: string
+    footerNav: string
+  }
 }
 
 const fr: Copy = {
@@ -242,20 +252,21 @@ const fr: Copy = {
     sub: 'Faites glisser pour faire tourner la galerie.',
     prevLabel: 'Service précédent',
     nextLabel: 'Service suivant',
+    inquiryMessage: "Bonjour Lydie, je suis intéressé(e) par le service « {service} ». Pouvez-vous m'en dire plus ?",
+    inquiryLabel: 'Demander ce service',
     items: [
-      { name: 'Diplomatie & coopération', category: 'Conseil stratégique', tagline: 'Représentation, médiation et relations institutionnelles.' },
+      { name: 'Diplomatie & coopération', category: 'Conseil stratégique', tagline: 'Représentation, médiation, relations institutionnelles, porte-parolat et communication institutionnelle.' },
       { name: 'Services migratoires', category: 'Mobilité internationale', tagline: 'Changement de pays, résidence et naturalisation.' },
       { name: 'Services consulaires', category: 'Mobilité internationale', tagline: 'Visas, démarches administratives et accompagnement consulaire.' },
-      { name: 'Organisation de voyages', category: 'Mobilité internationale', tagline: 'Voyages sur mesure pour particuliers et professionnels.' },
-      { name: 'Immobilier', category: 'Patrimoine', tagline: 'Location, vente, achat et estimation immobilière.' },
-      { name: "Formation d'élues", category: 'Formation', tagline: 'Accompagnement des élues locales depuis 2017.' },
+      { name: 'Voyages, tours et réservations', category: 'Mobilité internationale', tagline: 'Organisation de voyages pour groupes, entreprises et particuliers.' },
+      { name: 'Patrimoine & immobilier', category: 'Patrimoine', tagline: 'Location, vente, achat, estimation immobilière et recherche de financement (fundraising).' },
+      { name: "Formation d'élues & de formateurs", category: 'Formation', tagline: "Formation de formateurs, ingénierie pédagogique, gestion de projets et accompagnement des élues locales depuis 2017." },
       { name: 'Microfinance & levée de fonds', category: 'Financement', tagline: 'Structuration financière et recherche de fonds.' },
       { name: "Organisation d'événements", category: 'Événementiel', tagline: 'Événements institutionnels, professionnels et privés.' },
       { name: 'Institut de langues', category: 'Éducation', tagline: 'FLE, espagnol et anglais, tous niveaux.' },
-      { name: 'Formation en entreprise', category: 'Formation', tagline: 'Formation de formateurs et ingénierie pédagogique.' },
       { name: 'Centre sportif', category: 'Bien-être', tagline: 'Programmes sportifs et encadrement.' },
       { name: 'Naturopathie', category: 'Bien-être', tagline: 'Approche naturelle de la santé et du bien-être.' },
-      { name: 'Réseau de mise en relation', category: 'Mise en réseau', tagline: 'Mise en relation de prestataires et recrutement de profils qualifiés.' },
+      { name: 'Ressources humaines & mise en relation', category: 'Networking & RH', tagline: 'Recrutement de profils qualifiés, mise en relation de prestataires et connexion de fournisseurs et services.' },
     ],
   },
   career: {
@@ -498,6 +509,14 @@ const fr: Copy = {
     role: 'Consultante internationale',
     rights: 'Tous droits réservés.',
   },
+  a11y: {
+    mainNav: 'Navigation principale',
+    language: 'Langue',
+    openMenu: 'Ouvrir le menu',
+    closeMenu: 'Fermer le menu',
+    mobileNav: 'Navigation mobile',
+    footerNav: 'Pied de page',
+  },
 }
 
 const es: Copy = {
@@ -587,20 +606,21 @@ const es: Copy = {
     sub: 'Arrastre para girar la galería.',
     prevLabel: 'Servicio anterior',
     nextLabel: 'Servicio siguiente',
+    inquiryMessage: 'Hola Lydie, estoy interesado/a en el servicio «{service}». ¿Podría contarme más?',
+    inquiryLabel: 'Solicitar este servicio',
     items: [
-      { name: 'Diplomacia y cooperación', category: 'Consultoría estratégica', tagline: 'Representación, mediación y relaciones institucionales.' },
+      { name: 'Diplomacia y cooperación', category: 'Consultoría estratégica', tagline: 'Representación, mediación, relaciones institucionales, vocería y comunicación institucional.' },
       { name: 'Servicios migratorios', category: 'Movilidad internacional', tagline: 'Cambio de país, residencia y naturalización.' },
       { name: 'Servicios consulares', category: 'Movilidad internacional', tagline: 'Visados, trámites administrativos y acompañamiento consular.' },
-      { name: 'Organización de viajes', category: 'Movilidad internacional', tagline: 'Viajes a medida para particulares y profesionales.' },
-      { name: 'Bienes raíces', category: 'Patrimonio', tagline: 'Alquiler, venta, compra y tasación inmobiliaria.' },
-      { name: 'Formación de electas', category: 'Formación', tagline: 'Acompañamiento de electas locales desde 2017.' },
+      { name: 'Viajes, tours y reservaciones', category: 'Movilidad internacional', tagline: 'Organización de viajes para grupos, empresas y particulares.' },
+      { name: 'Patrimonio e inmobiliaria', category: 'Patrimonio', tagline: 'Alquiler, venta, compra, tasación inmobiliaria y búsqueda de financiación (fundraising).' },
+      { name: 'Formación de electas y formadores', category: 'Formación', tagline: 'Formación de formadores, ingeniería pedagógica, gestión de proyectos y acompañamiento de electas locales desde 2017.' },
       { name: 'Microfinanzas y captación de fondos', category: 'Financiación', tagline: 'Estructuración financiera y búsqueda de fondos.' },
       { name: 'Organización de eventos', category: 'Eventos', tagline: 'Eventos institucionales, profesionales y privados.' },
       { name: 'Instituto de idiomas', category: 'Educación', tagline: 'Francés, español e inglés, todos los niveles.' },
-      { name: 'Formación empresarial', category: 'Formación', tagline: 'Formación de formadores e ingeniería pedagógica.' },
       { name: 'Centro deportivo', category: 'Bienestar', tagline: 'Programas deportivos y acompañamiento.' },
       { name: 'Naturopatía', category: 'Bienestar', tagline: 'Enfoque natural de la salud y del bienestar.' },
-      { name: 'Red de contactos y servicios', category: 'Networking', tagline: 'Conexión de proveedores y servicios, y reclutamiento de perfiles calificados.' },
+      { name: 'Recursos humanos y red de contactos', category: 'Networking y RRHH', tagline: 'Reclutamiento de perfiles calificados, conexión de prestadores y proveedores de servicios.' },
     ],
   },
   career: {
@@ -653,7 +673,7 @@ const es: Copy = {
       {
         period: '1986 · 2015',
         role: 'Responsable de servicio, cargo territorial',
-        org: 'Conseil Régional de la Guadeloupe',
+        org: 'Consejo Regional de Guadalupe',
         place: 'Basse-Terre, Guadalupe',
         desc: 'Documentación, protocolo, gabinetes y prensa de los presidentes de la Región, asuntos escolares y formación profesional.',
       },
@@ -788,7 +808,7 @@ const es: Copy = {
       budgetValue: '80 000 € – 150 000 €',
       partnersTitle: 'Socios previstos',
       partners: [
-        'Conseil Régional de la Guadeloupe',
+        'Consejo Regional de Guadalupe',
         'Departamento',
         'Mancomunidades',
         'Municipios',
@@ -842,6 +862,14 @@ const es: Copy = {
   footer: {
     role: 'Consultora internacional',
     rights: 'Todos los derechos reservados.',
+  },
+  a11y: {
+    mainNav: 'Navegación principal',
+    language: 'Idioma',
+    openMenu: 'Abrir el menú',
+    closeMenu: 'Cerrar el menú',
+    mobileNav: 'Navegación móvil',
+    footerNav: 'Pie de página',
   },
 }
 
@@ -932,20 +960,21 @@ const en: Copy = {
     sub: 'Drag to rotate the gallery.',
     prevLabel: 'Previous service',
     nextLabel: 'Next service',
+    inquiryMessage: 'Hello Lydie, I\'m interested in the "{service}" service. Could you tell me more?',
+    inquiryLabel: 'Request this service',
     items: [
-      { name: 'Diplomacy & cooperation', category: 'Strategic consulting', tagline: 'Representation, mediation and institutional relations.' },
+      { name: 'Diplomacy & cooperation', category: 'Strategic consulting', tagline: 'Representation, mediation, institutional relations, spokesmanship and institutional communication.' },
       { name: 'Migration services', category: 'International mobility', tagline: 'Changing country, residency and naturalisation.' },
       { name: 'Consular services', category: 'International mobility', tagline: 'Visas, administrative procedures and consular support.' },
-      { name: 'Travel planning', category: 'International mobility', tagline: 'Tailor-made trips for individuals and professionals.' },
-      { name: 'Real estate', category: 'Property', tagline: 'Rental, sale, purchase and property appraisal.' },
-      { name: 'Training for elected officials', category: 'Training', tagline: 'Supporting locally elected officials since 2017.' },
+      { name: 'Travel, tours & bookings', category: 'International mobility', tagline: 'Trip planning for groups, businesses and individuals.' },
+      { name: 'Property & real estate', category: 'Property', tagline: 'Rental, sale, purchase, appraisal and financing/fundraising for property projects.' },
+      { name: 'Training for Elected Officials & Trainers', category: 'Training', tagline: 'Trainer training, instructional design, project management and support for locally elected officials since 2017.' },
       { name: 'Microfinance & fundraising', category: 'Financing', tagline: 'Financial structuring and fundraising.' },
       { name: 'Event planning', category: 'Events', tagline: 'Institutional, professional and private events.' },
       { name: 'Language institute', category: 'Education', tagline: 'French, Spanish and English, all levels.' },
-      { name: 'Corporate training', category: 'Training', tagline: 'Train-the-trainer programmes and instructional design.' },
       { name: 'Sports centre', category: 'Wellbeing', tagline: 'Sports programmes and coaching.' },
       { name: 'Naturopathy', category: 'Wellbeing', tagline: 'A natural approach to health and wellbeing.' },
-      { name: 'Networking & Referral Services', category: 'Networking', tagline: 'Connecting service providers and recruiting qualified talent.' },
+      { name: 'HR & Networking Services', category: 'Networking & HR', tagline: 'Recruiting qualified talent, connecting service providers and suppliers.' },
     ],
   },
   career: {
@@ -998,7 +1027,7 @@ const en: Copy = {
       {
         period: '1986 · 2015',
         role: 'Department head, territorial civil servant',
-        org: 'Conseil Régional de la Guadeloupe',
+        org: 'Regional Council of Guadeloupe',
         place: 'Basse-Terre, Guadeloupe',
         desc: 'Documentation, protocol, offices and press service of the regional presidents, school affairs and vocational training.',
       },
@@ -1133,7 +1162,7 @@ const en: Copy = {
       budgetValue: '€80,000 – €150,000',
       partnersTitle: 'Potential partners',
       partners: [
-        'Conseil Régional de la Guadeloupe',
+        'Regional Council of Guadeloupe',
         'Département',
         'Intermunicipal communities',
         'Municipalities',
@@ -1187,6 +1216,14 @@ const en: Copy = {
   footer: {
     role: 'International consultant',
     rights: 'All rights reserved.',
+  },
+  a11y: {
+    mainNav: 'Main navigation',
+    language: 'Language',
+    openMenu: 'Open menu',
+    closeMenu: 'Close menu',
+    mobileNav: 'Mobile navigation',
+    footerNav: 'Footer',
   },
 }
 
