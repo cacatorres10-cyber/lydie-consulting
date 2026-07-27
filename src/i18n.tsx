@@ -41,6 +41,7 @@ export interface Copy {
     services: string
     career: string
     forum: string
+    books: string
     contact: string
   }
   hero: {
@@ -154,6 +155,14 @@ export interface Copy {
     linkedinLabel: string
     location: string
   }
+  books: {
+    eyebrow: string
+    title: string
+    intro: string
+    buyLabel: string
+    buyMessage: string
+    items: { title: string; description: string; price: string }[]
+  }
   footer: { role: string; rights: string }
   a11y: {
     mainNav: string
@@ -177,6 +186,7 @@ const fr: Copy = {
     services: 'Services',
     career: 'Parcours',
     forum: 'Forum Amérique Latine & Caraïbe',
+    books: 'E-books',
     contact: 'Contact',
   },
   hero: {
@@ -262,11 +272,11 @@ const fr: Copy = {
       { name: 'Patrimoine & immobilier', category: 'Patrimoine', tagline: 'Location, vente, achat, estimation immobilière et recherche de financement (fundraising).' },
       { name: "Formation d'élues & de formateurs", category: 'Formation', tagline: "Formation de formateurs, ingénierie pédagogique, gestion de projets et accompagnement des élues locales depuis 2017." },
       { name: 'Microfinance & levée de fonds', category: 'Financement', tagline: 'Structuration financière et recherche de fonds.' },
-      { name: "Organisation d'événements", category: 'Événementiel', tagline: 'Événements institutionnels, professionnels et privés.' },
+      { name: "Organisation d'événements", category: 'Événementiel', tagline: 'Événements institutionnels et professionnels, mariages, anniversaires, quinceañeras et fêtes privées.' },
       { name: 'Institut de langues', category: 'Éducation', tagline: 'FLE, espagnol et anglais, tous niveaux.' },
       { name: 'Centre sportif', category: 'Bien-être', tagline: 'Programmes sportifs et encadrement.' },
       { name: 'Naturopathie', category: 'Bien-être', tagline: 'Approche naturelle de la santé et du bien-être.' },
-      { name: 'Ressources humaines & mise en relation', category: 'Networking & RH', tagline: 'Recrutement de profils qualifiés, mise en relation de prestataires et connexion de fournisseurs et services.' },
+      { name: 'Ressources humaines & mise en relation', category: 'Networking & RH', tagline: 'Recrutement de profils qualifiés et mise en relation avec un réseau de prestataires : coachs sportifs, naturopathes, courtiers, experts financiers, agences de voyages.' },
     ],
   },
   career: {
@@ -505,6 +515,20 @@ const fr: Copy = {
     linkedinLabel: 'Me suivre sur LinkedIn',
     location: 'France',
   },
+  books: {
+    eyebrow: 'Ressources',
+    title: 'Mes e-books',
+    intro: 'Des guides pratiques à télécharger, directement inspirés de mon expérience de terrain.',
+    buyLabel: 'Télécharger',
+    buyMessage: "Bonjour Lydie, je souhaite acheter l'e-book « {title} » (9,97 €).",
+    items: [
+      {
+        title: 'Les Vingt Clés du Leadership Politique',
+        description: "Le guide pratique de l'Académie de Leadership : vingt thématiques essentielles de gouvernance, communication et leadership pour les élues et futures élues.",
+        price: '9,97 €',
+      },
+    ],
+  },
   footer: {
     role: 'Consultante internationale',
     rights: 'Tous droits réservés.',
@@ -531,6 +555,7 @@ const es: Copy = {
     services: 'Servicios',
     career: 'Trayectoria',
     forum: 'Foro América Latina y Caribe',
+    books: 'E-books',
     contact: 'Contacto',
   },
   hero: {
@@ -616,11 +641,11 @@ const es: Copy = {
       { name: 'Patrimonio e inmobiliaria', category: 'Patrimonio', tagline: 'Alquiler, venta, compra, tasación inmobiliaria y búsqueda de financiación (fundraising).' },
       { name: 'Formación de electas y formadores', category: 'Formación', tagline: 'Formación de formadores, ingeniería pedagógica, gestión de proyectos y acompañamiento de electas locales desde 2017.' },
       { name: 'Microfinanzas y captación de fondos', category: 'Financiación', tagline: 'Estructuración financiera y búsqueda de fondos.' },
-      { name: 'Organización de eventos', category: 'Eventos', tagline: 'Eventos institucionales, profesionales y privados.' },
+      { name: 'Organización de eventos', category: 'Eventos', tagline: 'Eventos institucionales y profesionales, bodas, cumpleaños, quinceañeras y fiestas privadas.' },
       { name: 'Instituto de idiomas', category: 'Educación', tagline: 'Francés, español e inglés, todos los niveles.' },
       { name: 'Centro deportivo', category: 'Bienestar', tagline: 'Programas deportivos y acompañamiento.' },
       { name: 'Naturopatía', category: 'Bienestar', tagline: 'Enfoque natural de la salud y del bienestar.' },
-      { name: 'Recursos humanos y red de contactos', category: 'Networking y RRHH', tagline: 'Reclutamiento de perfiles calificados, conexión de prestadores y proveedores de servicios.' },
+      { name: 'Recursos humanos y red de contactos', category: 'Networking y RRHH', tagline: 'Reclutamiento de perfiles calificados y conexión con una red de prestadores: entrenadores deportivos, naturópatas, corredores de seguros, expertos financieros, agencias de viajes.' },
     ],
   },
   career: {
@@ -859,6 +884,20 @@ const es: Copy = {
     linkedinLabel: 'Seguirme en LinkedIn',
     location: 'Francia',
   },
+  books: {
+    eyebrow: 'Recursos',
+    title: 'Mis e-books',
+    intro: 'Guías prácticas para descargar, inspiradas directamente en mi experiencia de terreno.',
+    buyLabel: 'Descargar',
+    buyMessage: 'Hola Lydie, deseo comprar el e-book «{title}» (9,97 €).',
+    items: [
+      {
+        title: 'Las Veinte Claves del Liderazgo Político',
+        description: 'La guía práctica de la Academia de Liderazgo: veinte temas esenciales de gobernanza, comunicación y liderazgo para electas y futuras electas.',
+        price: '9,97 €',
+      },
+    ],
+  },
   footer: {
     role: 'Consultora internacional',
     rights: 'Todos los derechos reservados.',
@@ -885,6 +924,7 @@ const en: Copy = {
     services: 'Services',
     career: 'Career',
     forum: 'Latin America & Caribbean Forum',
+    books: 'E-books',
     contact: 'Contact',
   },
   hero: {
@@ -970,11 +1010,11 @@ const en: Copy = {
       { name: 'Property & real estate', category: 'Property', tagline: 'Rental, sale, purchase, appraisal and financing/fundraising for property projects.' },
       { name: 'Training for Elected Officials & Trainers', category: 'Training', tagline: 'Trainer training, instructional design, project management and support for locally elected officials since 2017.' },
       { name: 'Microfinance & fundraising', category: 'Financing', tagline: 'Financial structuring and fundraising.' },
-      { name: 'Event planning', category: 'Events', tagline: 'Institutional, professional and private events.' },
+      { name: 'Event planning', category: 'Events', tagline: 'Institutional and professional events, weddings, birthdays, quinceañeras and private parties.' },
       { name: 'Language institute', category: 'Education', tagline: 'French, Spanish and English, all levels.' },
       { name: 'Sports centre', category: 'Wellbeing', tagline: 'Sports programmes and coaching.' },
       { name: 'Naturopathy', category: 'Wellbeing', tagline: 'A natural approach to health and wellbeing.' },
-      { name: 'HR & Networking Services', category: 'Networking & HR', tagline: 'Recruiting qualified talent, connecting service providers and suppliers.' },
+      { name: 'HR & Networking Services', category: 'Networking & HR', tagline: 'Recruiting qualified talent and connecting a network of providers: sports coaches, naturopaths, brokers, financial experts, travel agencies.' },
     ],
   },
   career: {
@@ -1212,6 +1252,20 @@ const en: Copy = {
     emailLabel: 'Send an email',
     linkedinLabel: 'Follow me on LinkedIn',
     location: 'France',
+  },
+  books: {
+    eyebrow: 'Resources',
+    title: 'My e-books',
+    intro: 'Practical downloadable guides, drawn directly from my field experience.',
+    buyLabel: 'Download',
+    buyMessage: 'Hello Lydie, I would like to buy the e-book "{title}" (€9.97).',
+    items: [
+      {
+        title: 'The Twenty Keys to Political Leadership',
+        description: "The Leadership Academy's practical guide: twenty essential themes in governance, communication and leadership for elected women and those aspiring to office.",
+        price: '€9.97',
+      },
+    ],
   },
   footer: {
     role: 'International consultant',

@@ -18,6 +18,7 @@ export function Footer() {
     { href: '#about', label: t.nav.about },
     { href: '#career', label: t.nav.career },
     { href: '#forum', label: t.nav.forum },
+    { href: '#books', label: t.nav.books },
     { href: '#contact', label: t.nav.contact },
   ]
 
