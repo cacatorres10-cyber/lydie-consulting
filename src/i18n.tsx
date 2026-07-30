@@ -265,7 +265,7 @@ const fr: Copy = {
     inquiryMessage: "Bonjour Lydie, je suis intéressé(e) par le service « {service} ». Pouvez-vous m'en dire plus ?",
     inquiryLabel: 'Demander ce service',
     items: [
-      { name: 'Diplomatie & coopération', category: 'Conseil stratégique', tagline: 'Représentation, médiation, relations institutionnelles, porte-parolat et communication institutionnelle.' },
+      { name: 'Diplomatie & coopération', category: 'Accompagnement administratif & stratégique', tagline: 'Représentation, médiation, relations institutionnelles, porte-parolat et communication institutionnelle.' },
       { name: 'Services migratoires', category: 'Mobilité internationale', tagline: 'Changement de pays, résidence et naturalisation.' },
       { name: 'Services consulaires', category: 'Mobilité internationale', tagline: 'Visas, démarches administratives et accompagnement consulaire.' },
       { name: 'Voyages, tours et réservations', category: 'Mobilité internationale', tagline: 'Organisation de voyages pour groupes, entreprises et particuliers.' },
@@ -523,8 +523,18 @@ const fr: Copy = {
     buyMessage: "Bonjour Lydie, je souhaite acheter l'e-book « {title} » (9,97 €).",
     items: [
       {
-        title: 'Les Vingt Clés du Leadership Politique',
-        description: "Le guide pratique de l'Académie de Leadership : vingt thématiques essentielles de gouvernance, communication et leadership pour les élues et futures élues.",
+        title: 'Recommencer sa vie',
+        description: 'Changer de pays, oser et réussir : le guide complet pour transformer sa vie après 50 ans.',
+        price: '9,97 €',
+      },
+      {
+        title: "Le Grand Pouvoir de l'Aloe Vera",
+        description: "Les bienfaits naturels de l'aloe vera pour la santé et le bien-être, par Lydie, naturopathe.",
+        price: '9,97 €',
+      },
+      {
+        title: 'Quand le pouvoir oublie l’humain',
+        description: "Chronique d'une société qui s'éloigne de ses valeurs : une réflexion sur le pouvoir, la société et l'humanité.",
         price: '9,97 €',
       },
     ],
@@ -634,7 +644,7 @@ const es: Copy = {
     inquiryMessage: 'Hola Lydie, estoy interesado/a en el servicio «{service}». ¿Podría contarme más?',
     inquiryLabel: 'Solicitar este servicio',
     items: [
-      { name: 'Diplomacia y cooperación', category: 'Consultoría estratégica', tagline: 'Representación, mediación, relaciones institucionales, vocería y comunicación institucional.' },
+      { name: 'Diplomacia y cooperación', category: 'Acompañamiento administrativo y estratégico', tagline: 'Representación, mediación, relaciones institucionales, vocería y comunicación institucional.' },
       { name: 'Servicios migratorios', category: 'Movilidad internacional', tagline: 'Cambio de país, residencia y naturalización.' },
       { name: 'Servicios consulares', category: 'Movilidad internacional', tagline: 'Visados, trámites administrativos y acompañamiento consular.' },
       { name: 'Viajes, tours y reservaciones', category: 'Movilidad internacional', tagline: 'Organización de viajes para grupos, empresas y particulares.' },
@@ -892,8 +902,18 @@ const es: Copy = {
     buyMessage: 'Hola Lydie, deseo comprar el e-book «{title}» (9,97 €).',
     items: [
       {
-        title: 'Las Veinte Claves del Liderazgo Político',
-        description: 'La guía práctica de la Academia de Liderazgo: veinte temas esenciales de gobernanza, comunicación y liderazgo para electas y futuras electas.',
+        title: 'Recomenzar tu vida',
+        description: 'Cambiar de país, atreverse y triunfar: la guía completa para transformar tu vida después de los 50 años.',
+        price: '9,97 €',
+      },
+      {
+        title: 'El Gran Poder del Aloe Vera',
+        description: 'Los beneficios naturales del aloe vera para la salud y el bienestar, por Lydie, naturópata.',
+        price: '9,97 €',
+      },
+      {
+        title: 'Cuando el poder olvida lo humano',
+        description: 'Crónica de una sociedad que se aleja de sus valores: una reflexión sobre el poder, la sociedad y la humanidad.',
         price: '9,97 €',
       },
     ],
@@ -1003,7 +1023,7 @@ const en: Copy = {
     inquiryMessage: 'Hello Lydie, I\'m interested in the "{service}" service. Could you tell me more?',
     inquiryLabel: 'Request this service',
     items: [
-      { name: 'Diplomacy & cooperation', category: 'Strategic consulting', tagline: 'Representation, mediation, institutional relations, spokesmanship and institutional communication.' },
+      { name: 'Diplomacy & cooperation', category: 'Administrative & strategic support', tagline: 'Representation, mediation, institutional relations, spokesmanship and institutional communication.' },
       { name: 'Migration services', category: 'International mobility', tagline: 'Changing country, residency and naturalisation.' },
       { name: 'Consular services', category: 'International mobility', tagline: 'Visas, administrative procedures and consular support.' },
       { name: 'Travel, tours & bookings', category: 'International mobility', tagline: 'Trip planning for groups, businesses and individuals.' },
@@ -1261,8 +1281,18 @@ const en: Copy = {
     buyMessage: 'Hello Lydie, I would like to buy the e-book "{title}" (€9.97).',
     items: [
       {
-        title: 'The Twenty Keys to Political Leadership',
-        description: "The Leadership Academy's practical guide: twenty essential themes in governance, communication and leadership for elected women and those aspiring to office.",
+        title: 'Starting Your Life Over',
+        description: 'Changing countries, daring and succeeding: the complete guide to transforming your life after 50.',
+        price: '€9.97',
+      },
+      {
+        title: 'The Great Power of Aloe Vera',
+        description: 'The natural benefits of aloe vera for health and well-being, by Lydie, naturopath.',
+        price: '€9.97',
+      },
+      {
+        title: 'When Power Forgets Humanity',
+        description: 'Chronicle of a society drifting away from its values: a reflection on power, society and humanity.',
         price: '€9.97',
       },
     ],
