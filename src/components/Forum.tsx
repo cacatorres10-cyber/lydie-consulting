@@ -340,6 +340,7 @@ export function Forum() {
               <HandCoins size={18} />
               {t.forum.donateLabel}
             </a>
+            <p className="mt-3 text-xs text-ink-400">{t.forum.donateNote}</p>
           </div>
         </Reveal>
       </div>

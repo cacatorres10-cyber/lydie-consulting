@@ -4,7 +4,7 @@ export const FACEBOOK_URL = 'https://www.facebook.com/lydie.guarinos?locale=pt_B
 export const TIKTOK_URL = 'https://www.tiktok.com/@travalari'
 
 // PLACEHOLDER: remplacer par l'adresse email reelle de Lydie avant la mise en ligne
-export const CONTACT_EMAIL = 'contact@lydie-consulting.com'
+export const CONTACT_EMAIL = 'lydie.guarinos@gmail.com'
 
 export const BASE_LOCATION = 'France'
 

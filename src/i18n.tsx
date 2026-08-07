@@ -106,6 +106,7 @@ export interface Copy {
     tabs: string[]
     donateLabel: string
     donateMessage: string
+    donateNote: string
     vision: {
       theme: string
       durationLocation: string
@@ -265,18 +266,18 @@ const fr: Copy = {
     inquiryMessage: "Bonjour Lydie, je suis intéressé(e) par le service « {service} ». Pouvez-vous m'en dire plus ?",
     inquiryLabel: 'Demander ce service',
     items: [
-      { name: 'Diplomatie & coopération', category: 'Accompagnement administratif & stratégique', tagline: 'Représentation, médiation, relations institutionnelles, porte-parolat et communication institutionnelle.' },
+      { name: 'Diplomatie & coopération', category: 'Accompagnement administratif & stratégique', tagline: 'Représentation, médiation, relations institutionnelles, porte-parolat, communication institutionnelle et gestion de crise.' },
       { name: 'Services migratoires', category: 'Mobilité internationale', tagline: 'Changement de pays, résidence et naturalisation.' },
       { name: 'Services consulaires', category: 'Mobilité internationale', tagline: 'Visas, démarches administratives et accompagnement consulaire.' },
-      { name: 'Voyages, tours et réservations', category: 'Mobilité internationale', tagline: 'Organisation de voyages pour groupes, entreprises et particuliers.' },
-      { name: 'Patrimoine & immobilier', category: 'Patrimoine', tagline: 'Location, vente, achat, estimation immobilière et recherche de financement (fundraising).' },
-      { name: "Formation d'élues & de formateurs", category: 'Formation', tagline: "Formation de formateurs, ingénierie pédagogique, gestion de projets et accompagnement des élues locales depuis 2017." },
+      { name: 'Agence de voyages & réservations', category: 'Mobilité internationale', tagline: "Tours, circuits dans le monde entier, réservation d'hôtel, de voiture et d'hébergement, voyages terrestres, croisières, avion et train, pour particuliers et professionnels." },
+      { name: 'Patrimoine & immobilier', category: 'Patrimoine', tagline: 'Gestion de patrimoine, rachat de prêt immobilier ou personnel, assurance biens et personnes, location, vente, achat, estimation immobilière et recherche de financement (fundraising).' },
+      { name: "Formation d'élues & de formateurs", category: 'Ingénierie de formation & pédagogique', tagline: "Formation de formateurs, ingénierie pédagogique, gestion de projets, préparation aux concours publics et accompagnement des élues locales depuis 2017." },
       { name: 'Microfinance & levée de fonds', category: 'Financement', tagline: 'Structuration financière et recherche de fonds.' },
-      { name: "Organisation d'événements", category: 'Événementiel', tagline: 'Événements institutionnels et professionnels, mariages, anniversaires, quinceañeras et fêtes privées.' },
-      { name: 'Institut de langues', category: 'Éducation', tagline: 'FLE, espagnol et anglais, tous niveaux.' },
-      { name: 'Centre sportif', category: 'Bien-être', tagline: 'Programmes sportifs et encadrement.' },
-      { name: 'Naturopathie', category: 'Bien-être', tagline: 'Approche naturelle de la santé et du bien-être.' },
-      { name: 'Ressources humaines & mise en relation', category: 'Networking & RH', tagline: 'Recrutement de profils qualifiés et mise en relation avec un réseau de prestataires : coachs sportifs, naturopathes, courtiers, experts financiers, agences de voyages.' },
+      { name: "Organisation d'événements", category: 'Événementiel', tagline: "Porte-parolat institutionnel, organisation de mariages de A à Z, événements institutionnels et professionnels, anniversaires, quinceañeras et fêtes privées." },
+      { name: 'Institut de langues', category: 'Éducation', tagline: 'FLE, français, anglais et espagnol, tous niveaux, y compris business.' },
+      { name: 'Centre sportif', category: 'Bien-être', tagline: 'Programmes sportifs, encadrement et conseils.' },
+      { name: 'Naturopathie', category: 'Bien-être', tagline: 'Approche naturelle de la santé, du bien-être et de la nutrition.' },
+      { name: 'Ressources humaines & mise en relation', category: 'Networking & RH', tagline: 'Recrutement de profils qualifiés et mise en relation avec un réseau de prestataires : coachs sportifs, naturopathes, courtiers en assurances, experts en financement (prêt immobilier, personnel, refonte de prêts), gestionnaires de patrimoine et agences de voyages.' },
     ],
   },
   career: {
@@ -364,6 +365,7 @@ const fr: Copy = {
     tabs: ['Vision', 'Le Forum Amérique Latine & Caraïbe', 'Édition pilote : Guadeloupe', 'Académie Leadership'],
     donateLabel: 'Soutenir le projet',
     donateMessage: 'Bonjour Lydie, je souhaite soutenir le Forum Amérique Latine & Caraïbe (don ou partenariat).',
+    donateNote: "Les modalités de don ou de partenariat s'organisent directement avec moi, par message.",
     vision: {
       theme: "Construire ensemble l'Amérique latine et la Caraïbe de demain",
       durationLocation:
@@ -644,18 +646,18 @@ const es: Copy = {
     inquiryMessage: 'Hola Lydie, estoy interesado/a en el servicio «{service}». ¿Podría contarme más?',
     inquiryLabel: 'Solicitar este servicio',
     items: [
-      { name: 'Diplomacia y cooperación', category: 'Acompañamiento administrativo y estratégico', tagline: 'Representación, mediación, relaciones institucionales, vocería y comunicación institucional.' },
+      { name: 'Diplomacia y cooperación', category: 'Acompañamiento administrativo y estratégico', tagline: 'Representación, mediación, relaciones institucionales, vocería, comunicación institucional y gestión de crisis.' },
       { name: 'Servicios migratorios', category: 'Movilidad internacional', tagline: 'Cambio de país, residencia y naturalización.' },
       { name: 'Servicios consulares', category: 'Movilidad internacional', tagline: 'Visados, trámites administrativos y acompañamiento consular.' },
-      { name: 'Viajes, tours y reservaciones', category: 'Movilidad internacional', tagline: 'Organización de viajes para grupos, empresas y particulares.' },
-      { name: 'Patrimonio e inmobiliaria', category: 'Patrimonio', tagline: 'Alquiler, venta, compra, tasación inmobiliaria y búsqueda de financiación (fundraising).' },
-      { name: 'Formación de electas y formadores', category: 'Formación', tagline: 'Formación de formadores, ingeniería pedagógica, gestión de proyectos y acompañamiento de electas locales desde 2017.' },
+      { name: 'Agencia de viajes y reservaciones', category: 'Movilidad internacional', tagline: 'Tours, circuitos por todo el mundo, reserva de hotel, auto y alojamiento, viajes terrestres, cruceros, avión y tren, para particulares y profesionales.' },
+      { name: 'Patrimonio e inmobiliaria', category: 'Patrimonio', tagline: 'Gestión de patrimonio, recompra de préstamo inmobiliario o personal, seguro de bienes y personas, alquiler, venta, compra, tasación inmobiliaria y búsqueda de financiación (fundraising).' },
+      { name: 'Formación de electas y formadores', category: 'Ingeniería de formación y pedagogía', tagline: 'Formación de formadores, ingeniería pedagógica, gestión de proyectos, preparación de oposiciones y concursos públicos, y acompañamiento de electas locales desde 2017.' },
       { name: 'Microfinanzas y captación de fondos', category: 'Financiación', tagline: 'Estructuración financiera y búsqueda de fondos.' },
-      { name: 'Organización de eventos', category: 'Eventos', tagline: 'Eventos institucionales y profesionales, bodas, cumpleaños, quinceañeras y fiestas privadas.' },
-      { name: 'Instituto de idiomas', category: 'Educación', tagline: 'Francés, español e inglés, todos los niveles.' },
-      { name: 'Centro deportivo', category: 'Bienestar', tagline: 'Programas deportivos y acompañamiento.' },
-      { name: 'Naturopatía', category: 'Bienestar', tagline: 'Enfoque natural de la salud y del bienestar.' },
-      { name: 'Recursos humanos y red de contactos', category: 'Networking y RRHH', tagline: 'Reclutamiento de perfiles calificados y conexión con una red de prestadores: entrenadores deportivos, naturópatas, corredores de seguros, expertos financieros, agencias de viajes.' },
+      { name: 'Organización de eventos', category: 'Eventos', tagline: 'Vocería institucional, organización de bodas de la A a la Z, eventos institucionales y profesionales, cumpleaños, quinceañeras y fiestas privadas.' },
+      { name: 'Instituto de idiomas', category: 'Educación', tagline: 'Francés, español e inglés, todos los niveles, incluido business.' },
+      { name: 'Centro deportivo', category: 'Bienestar', tagline: 'Programas deportivos, acompañamiento y consejos.' },
+      { name: 'Naturopatía', category: 'Bienestar', tagline: 'Enfoque natural de la salud, el bienestar y la nutrición.' },
+      { name: 'Recursos humanos y red de contactos', category: 'Networking y RRHH', tagline: 'Reclutamiento de perfiles calificados y conexión con una red de prestadores: entrenadores deportivos, naturópatas, corredores de seguros, expertos en financiación (préstamo inmobiliario, personal, refinanciación), gestores de patrimonio y agencias de viajes.' },
     ],
   },
   career: {
@@ -743,6 +745,7 @@ const es: Copy = {
     tabs: ['Visión', 'El Foro América Latina y Caribe', 'Edición piloto: Guadalupe', 'Academia de Liderazgo'],
     donateLabel: 'Apoyar el proyecto',
     donateMessage: 'Hola Lydie, deseo apoyar el Foro América Latina y Caribe (donación o alianza).',
+    donateNote: 'Las modalidades de donación o alianza se coordinan directamente conmigo, por mensaje.',
     vision: {
       theme: 'Construir juntos América Latina y el Caribe de mañana',
       durationLocation:
@@ -1023,18 +1026,18 @@ const en: Copy = {
     inquiryMessage: 'Hello Lydie, I\'m interested in the "{service}" service. Could you tell me more?',
     inquiryLabel: 'Request this service',
     items: [
-      { name: 'Diplomacy & cooperation', category: 'Administrative & strategic support', tagline: 'Representation, mediation, institutional relations, spokesmanship and institutional communication.' },
+      { name: 'Diplomacy & cooperation', category: 'Administrative & strategic support', tagline: 'Representation, mediation, institutional relations, spokesmanship, institutional communication and crisis management.' },
       { name: 'Migration services', category: 'International mobility', tagline: 'Changing country, residency and naturalisation.' },
       { name: 'Consular services', category: 'International mobility', tagline: 'Visas, administrative procedures and consular support.' },
-      { name: 'Travel, tours & bookings', category: 'International mobility', tagline: 'Trip planning for groups, businesses and individuals.' },
-      { name: 'Property & real estate', category: 'Property', tagline: 'Rental, sale, purchase, appraisal and financing/fundraising for property projects.' },
-      { name: 'Training for Elected Officials & Trainers', category: 'Training', tagline: 'Trainer training, instructional design, project management and support for locally elected officials since 2017.' },
+      { name: 'Travel Agency & Reservations', category: 'International mobility', tagline: 'Tours, worldwide circuits, hotel, car and lodging bookings, ground travel, cruises, flights and trains, for individuals and professionals.' },
+      { name: 'Property & real estate', category: 'Property', tagline: 'Wealth management, mortgage or personal loan refinancing, property & personal insurance, rental, sale, purchase, appraisal and fundraising for property projects.' },
+      { name: 'Training for Elected Officials & Trainers', category: 'Training & Instructional Design', tagline: 'Trainer training, instructional design, project management, public exam preparation and support for locally elected officials since 2017.' },
       { name: 'Microfinance & fundraising', category: 'Financing', tagline: 'Financial structuring and fundraising.' },
-      { name: 'Event planning', category: 'Events', tagline: 'Institutional and professional events, weddings, birthdays, quinceañeras and private parties.' },
-      { name: 'Language institute', category: 'Education', tagline: 'French, Spanish and English, all levels.' },
-      { name: 'Sports centre', category: 'Wellbeing', tagline: 'Sports programmes and coaching.' },
-      { name: 'Naturopathy', category: 'Wellbeing', tagline: 'A natural approach to health and wellbeing.' },
-      { name: 'HR & Networking Services', category: 'Networking & HR', tagline: 'Recruiting qualified talent and connecting a network of providers: sports coaches, naturopaths, brokers, financial experts, travel agencies.' },
+      { name: 'Event planning', category: 'Events', tagline: 'Institutional spokesmanship, weddings planned from A to Z, institutional and professional events, birthdays, quinceañeras and private parties.' },
+      { name: 'Language institute', category: 'Education', tagline: 'French, Spanish and English, all levels, including business.' },
+      { name: 'Sports centre', category: 'Wellbeing', tagline: 'Sports programmes, coaching and advice.' },
+      { name: 'Naturopathy', category: 'Wellbeing', tagline: 'A natural approach to health, wellbeing and nutrition.' },
+      { name: 'HR & Networking Services', category: 'Networking & HR', tagline: 'Recruiting qualified talent and connecting a network of providers: sports coaches, naturopaths, insurance brokers, financing experts (mortgage, personal loans, refinancing), wealth managers and travel agencies.' },
     ],
   },
   career: {
@@ -1122,6 +1125,7 @@ const en: Copy = {
     tabs: ['Vision', 'The Latin America & Caribbean Forum', 'Pilot edition: Guadeloupe', 'Leadership Academy'],
     donateLabel: 'Support the project',
     donateMessage: 'Hello Lydie, I would like to support the Latin America & Caribbean Forum (donation or partnership).',
+    donateNote: 'Donation and partnership arrangements are made directly with me, by message.',
     vision: {
       theme: "Building tomorrow's Latin America and Caribbean together",
       durationLocation:
